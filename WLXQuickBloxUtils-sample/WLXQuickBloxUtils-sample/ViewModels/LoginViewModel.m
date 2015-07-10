@@ -23,21 +23,18 @@
 - (instancetype)initWithQuickbloxUtils:(WLXQuickBloxUtils *)quickbloxUtils {
     self = [super init];
     if(self) {
-        _emailPlaceholder = [NSLocalizedString(@"email", nil) capitalizeFirstWord];
-        _passwordPlaceholder = [NSLocalizedString(@"password", nil) capitalizeFirstWord];
-        _loginButtonTitle = [NSLocalizedString(@"login_button_title", nil) capitalizeFirstWord];
-        _signUpButtonTitle = [NSLocalizedString(@"signup_button_title", nil) capitalizeFirstWord];
+        _emailPlaceholder = [NSLocalizedString(@"email", nil) CapitalizeFirstWord];
+        _passwordPlaceholder = [NSLocalizedString(@"password", nil) CapitalizeFirstWord];
+        _loginButtonTitle = [NSLocalizedString(@"login_button_title", nil) CapitalizeFirstWord];
+        _signUpButtonTitle = [NSLocalizedString(@"signup_button_title", nil) CapitalizeFirstWord];
         _quickbloxUtils = quickbloxUtils;
     }
     return self;
 }
 
-- (void)loginWithEmail:(NSString *)email
-              password:(NSString *)password
-               success:(void(^)(UserViewModel *))success
-               failure:(void(^)(NSString *))failure {
-    [self.quickbloxUtils logInWithAuthentication:email
-                                        password:password
+- (void)login:(void(^)(UserViewModel *))success failure:(void(^)(NSString *))failure {
+    [self.quickbloxUtils logInWithAuthentication:self.email
+                                        password:self.password
                                         delegate:nil
                                          success:^(QBUUser *user) {
                                              UserViewModel *userViewModel = [[UserViewModel alloc] initWithQBUUser:user];
@@ -46,17 +43,14 @@
                                              }
                                          } failure:^(NSError *error) {
                                              if(failure) {
-                                                 failure([NSLocalizedString(@"login_error", nil) capitalizeFirstWord]);
+                                                 failure([NSLocalizedString(@"login_error", nil) CapitalizeFirstWord]);
                                              }
                                          }];
 }
 
-- (void)signUpWithEmail:(NSString *)email
-              password:(NSString *)password
-               success:(void(^)(UserViewModel *))success
-               failure:(void(^)(NSString *))failure {
-    [self.quickbloxUtils signUpWithAuthentication:email
-                                        password:password
+- (void)signup:(void(^)(UserViewModel *))success failure:(void(^)(NSString *))failure {
+    [self.quickbloxUtils signUpWithAuthentication:self.email
+                                        password:self.password
                                         delegate:nil
                                          success:^(QBUUser *user) {
                                              UserViewModel *userViewModel = [[UserViewModel alloc] initWithQBUUser:user];
@@ -65,7 +59,7 @@
                                              }
                                          } failure:^(NSError *error) {
                                              if(failure) {
-                                                 failure([NSLocalizedString(@"signup_error", nil) capitalizeFirstWord]);
+                                                 failure([NSLocalizedString(@"signup_error", nil) CapitalizeFirstWord]);
                                              }
                                          }];
 }
@@ -79,7 +73,7 @@
         afterValidateBlock(YES, nil);
     } else {
         NSString *errorMessageKey = validEmail ? @"password_not_valid" : @"email_not_valid";
-        afterValidateBlock(NO, [NSLocalizedString(errorMessageKey, nil) capitalizeFirstWord]);
+        afterValidateBlock(NO, [NSLocalizedString(errorMessageKey, nil) CapitalizeFirstWord]);
     }
 }
 

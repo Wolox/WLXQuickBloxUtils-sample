@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (capitalizeFirstWord)
+@interface NSString (CapitalizeFirstWord)
 
-- (NSString*)capitalizeFirstWord;
+- (NSString*)CapitalizeFirstWord;
 
 @end

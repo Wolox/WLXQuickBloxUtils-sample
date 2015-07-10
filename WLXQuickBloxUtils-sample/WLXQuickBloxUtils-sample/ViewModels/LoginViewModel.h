@@ -16,20 +16,15 @@
 @property (readonly, nonatomic) NSString *loginButtonTitle;
 @property (readonly, nonatomic) NSString *signUpButtonTitle;
 
+@property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *password;
+
 - (instancetype)initWithQuickbloxUtils:(WLXQuickBloxUtils *)quickbloxUtils;
 
-- (void)loginWithEmail:(NSString *)email
-              password:(NSString *)password
-               success:(void(^)(UserViewModel *))success
-               failure:(void(^)(NSString *))failure;
+- (void)login:(void(^)(UserViewModel *))success failure:(void(^)(NSString *))failure;
 
-- (void)signUpWithEmail:(NSString *)email
-               password:(NSString *)password
-                success:(void(^)(UserViewModel *))success
-                failure:(void(^)(NSString *))failure;
+- (void)signup:(void(^)(UserViewModel *))success failure:(void(^)(NSString *))failure;
 
-- (void)validateEmail:(NSString *)email
-             password:(NSString *)password
-        afterValidate:(void(^)(BOOL, NSString *))afterValidateBlock;
+- (void)validate:(void(^)(BOOL, NSString *))afterValidateBlock;
 
 @end

@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 wolox. All rights reserved.
 //
 
-#import "NSString+capitalizeFirstWord.h"
+#import "NSString+CapitalizeFirstWord.h"
 
-@implementation NSString (capitalizeFirstWord)
+@implementation NSString (CapitalizeFirstWord)
 
-- (NSString*)capitalizeFirstWord {
+- (NSString*)CapitalizeFirstWord {
     if(self.length == 0) {
         return self;
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D8C102A1B5072C1000DAE2C /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C10271B5072C1000DAE2C /* LoginViewModel.m */; };
+		2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C10291B5072C1000DAE2C /* UserViewModel.m */; };
+		2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C102E1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m */; };
 		2DAAC1C01B5036440032584C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1BF1B5036440032584C /* main.m */; };
 		2DAAC1CB1B5036440032584C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1CA1B5036440032584C /* Images.xcassets */; };
 		2DAAC1CE1B5036440032584C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1CC1B5036440032584C /* LaunchScreen.xib */; };
@@ -30,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		0049314DB306F0B534939661 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2D8C10261B5072C1000DAE2C /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		2D8C10271B5072C1000DAE2C /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		2D8C10281B5072C1000DAE2C /* UserViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewModel.h; sourceTree = "<group>"; };
+		2D8C10291B5072C1000DAE2C /* UserViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewModel.m; sourceTree = "<group>"; };
+		2D8C102D1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CapitalizeFirstWord.h"; sourceTree = "<group>"; };
+		2D8C102E1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CapitalizeFirstWord.m"; sourceTree = "<group>"; };
 		2DAAC1BA1B5036440032584C /* WLXQuickBloxUtils-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WLXQuickBloxUtils-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAAC1BE1B5036440032584C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DAAC1BF1B5036440032584C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +85,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2D8C10251B5072C1000DAE2C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2D8C10261B5072C1000DAE2C /* LoginViewModel.h */,
+				2D8C10271B5072C1000DAE2C /* LoginViewModel.m */,
+				2D8C10281B5072C1000DAE2C /* UserViewModel.h */,
+				2D8C10291B5072C1000DAE2C /* UserViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2D8C102C1B5073D3000DAE2C /* Foundation categories */ = {
+			isa = PBXGroup;
+			children = (
+				2D8C102D1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.h */,
+				2D8C102E1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m */,
+			);
+			path = "Foundation categories";
+			sourceTree = "<group>";
+		};
 		2DAAC1B11B5036440032584C = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +128,11 @@
 		2DAAC1BC1B5036440032584C /* WLXQuickBloxUtils-sample */ = {
 			isa = PBXGroup;
 			children = (
+				2D8C102C1B5073D3000DAE2C /* Foundation categories */,
 				2DAAC1EA1B5038230032584C /* AppDelegate */,
 				2DAAC1ED1B5038230032584C /* Services */,
 				2DAAC1F01B5038230032584C /* Storyboards */,
+				2D8C10251B5072C1000DAE2C /* ViewModels */,
 				2DAAC1F21B5038230032584C /* ViewControllers */,
 				2DAAC1CA1B5036440032584C /* Images.xcassets */,
 				2DAAC1CC1B5036440032584C /* LaunchScreen.xib */,
@@ -317,8 +348,11 @@
 			files = (
 				2DAAC1F81B5038230032584C /* LoginViewController.m in Sources */,
 				2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */,
+				2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */,
 				2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */,
+				2D8C102A1B5072C1000DAE2C /* LoginViewModel.m in Sources */,
 				2DAAC1C01B5036440032584C /* main.m in Sources */,
+				2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
