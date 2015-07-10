@@ -79,11 +79,11 @@
             if(response.status == QBResponseStatusCodeValidationFailed) {
                 [self signUpInternalLoginWithAuthentication:authentication password:password delegate:delegate success:success failure:failure];
             }
-            NSLog(@"error: %@", response.error);
         }];
     } errorBlock:^(QBResponse *response) {
-        // error handling
-        NSLog(@"error: %@", response.error);
+        if(failure) {
+            failure(response.error.error);
+        }
     }];
 }
 
@@ -97,6 +97,10 @@
     } else {
         [[QBChat instance] logout];
     }
+}
+
+- (BOOL)isLoggedIn {
+    return [self chatInstance].isLoggedIn;
 }
 
 - (BOOL)userIsLoggedIn {
