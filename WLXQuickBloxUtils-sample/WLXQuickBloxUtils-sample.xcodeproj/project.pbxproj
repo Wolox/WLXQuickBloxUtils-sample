@@ -18,6 +18,9 @@
 		2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1EF1B5038230032584C /* WLXQuickBloxUtils.m */; };
 		2DAAC1F71B5038230032584C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1F11B5038230032584C /* Main.storyboard */; };
 		2DAAC1F81B5038230032584C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1F41B5038230032584C /* LoginViewController.m */; };
+		2DDC3AAE1B61A2AD00951E5A /* NSString+capitalizeFirstWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC3AAB1B61A2AD00951E5A /* NSString+capitalizeFirstWord.m */; };
+		2DDC3AAF1B61A2AD00951E5A /* UIView+makeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC3AAD1B61A2AD00951E5A /* UIView+makeToast.m */; };
+		2DDC3AB91B61A47200951E5A /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC3AB81B61A47200951E5A /* Application.m */; };
 		DC622D4610592A32A176F399 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,11 @@
 		2DAAC1F11B5038230032584C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2DAAC1F31B5038230032584C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2DAAC1F41B5038230032584C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2DDC3AAB1B61A2AD00951E5A /* NSString+capitalizeFirstWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+capitalizeFirstWord.m"; sourceTree = "<group>"; };
+		2DDC3AAC1B61A2AD00951E5A /* UIView+makeToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+makeToast.h"; sourceTree = "<group>"; };
+		2DDC3AAD1B61A2AD00951E5A /* UIView+makeToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+makeToast.m"; sourceTree = "<group>"; };
+		2DDC3AB71B61A47200951E5A /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		2DDC3AB81B61A47200951E5A /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 		302F48B23BEC552C62023089 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				2D8C102C1B5073D3000DAE2C /* Foundation categories */,
+				2DDC3AA91B61A2AD00951E5A /* UIKit categories */,
 				2DAAC1EA1B5038230032584C /* AppDelegate */,
 				2DAAC1ED1B5038230032584C /* Services */,
 				2DAAC1F01B5038230032584C /* Storyboards */,
@@ -179,6 +188,8 @@
 		2DAAC1ED1B5038230032584C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2DDC3AB71B61A47200951E5A /* Application.h */,
+				2DDC3AB81B61A47200951E5A /* Application.m */,
 				2DAAC1EE1B5038230032584C /* WLXQuickBloxUtils.h */,
 				2DAAC1EF1B5038230032584C /* WLXQuickBloxUtils.m */,
 			);
@@ -200,6 +211,24 @@
 				2DAAC1F41B5038230032584C /* LoginViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2DDC3AA91B61A2AD00951E5A /* UIKit categories */ = {
+			isa = PBXGroup;
+			children = (
+				2DDC3AAA1B61A2AD00951E5A /* Foundation categories */,
+				2DDC3AAC1B61A2AD00951E5A /* UIView+makeToast.h */,
+				2DDC3AAD1B61A2AD00951E5A /* UIView+makeToast.m */,
+			);
+			path = "UIKit categories";
+			sourceTree = "<group>";
+		};
+		2DDC3AAA1B61A2AD00951E5A /* Foundation categories */ = {
+			isa = PBXGroup;
+			children = (
+				2DDC3AAB1B61A2AD00951E5A /* NSString+capitalizeFirstWord.m */,
+			);
+			path = "Foundation categories";
 			sourceTree = "<group>";
 		};
 		FCC6580AF82AD9046EB98A29 /* Pods */ = {
@@ -346,12 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDC3AAE1B61A2AD00951E5A /* NSString+capitalizeFirstWord.m in Sources */,
 				2DAAC1F81B5038230032584C /* LoginViewController.m in Sources */,
 				2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */,
 				2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */,
 				2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */,
 				2D8C102A1B5072C1000DAE2C /* LoginViewModel.m in Sources */,
+				2DDC3AAF1B61A2AD00951E5A /* UIView+makeToast.m in Sources */,
 				2DAAC1C01B5036440032584C /* main.m in Sources */,
+				2DDC3AB91B61A47200951E5A /* Application.m in Sources */,
 				2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "WLXQuickBloxUtils-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -481,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0049314DB306F0B534939661 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "WLXQuickBloxUtils-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
