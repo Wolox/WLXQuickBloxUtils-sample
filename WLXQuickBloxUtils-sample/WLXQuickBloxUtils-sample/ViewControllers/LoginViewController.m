@@ -51,17 +51,15 @@
 }
 
 - (void)validateFieldsWithValidBlock:(void(^)())validBlock {
-    [self.viewModel validateEmail:self.emailTextField.text
-                         password:self.passwordTextField.text
-                    afterValidate:^(BOOL valid, NSString *errorMessage) {
-                        if(valid) {
-                            if(validBlock) {
-                                validBlock();
-                            }
-                        } else {
-                            [self.view makeToastWithText:errorMessage];
-                        }
-                    }];
+    [self.viewModel validate:^(BOOL valid, NSString *errorMSG) {
+        if(valid) {
+            if(validBlock) {
+                validBlock();
+            }
+        } else {
+            [self.view makeToastWithText:errorMSG];
+        }
+    }];
 }
 
 #pragma mark - Recognizer methods
@@ -96,35 +94,34 @@
 }
 
 - (void)performLogin {
-    [self.viewModel loginWithEmail:self.emailTextField.text
-                          password:self.passwordTextField.text
-                           success:^(UserViewModel *userViewModel) {
-                               dispatch_async(dispatch_get_main_queue(), ^{
-                                   [self segueToUserList:userViewModel];
-                                   [self hideButtons:NO];
-                               });
-                           } failure:^(NSString *errorMessage) {
-                               dispatch_async(dispatch_get_main_queue(), ^{
-                                   [self hideButtons:NO];
-                                   [self.view makeToastWithText:errorMessage];
-                               });
-                           }];
+    [self updateViewModelData];
+    [self.viewModel login:^(UserViewModel *userViewModel){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self segueToUserList:userViewModel];
+            [self hideButtons:NO];
+        });
+    } failure:^(NSString *errorMSG) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self hideButtons:NO];
+            [self.view makeToastWithText:errorMSG];
+        });
+    }];
 }
 
 - (void)performSignUp {
-    [self.viewModel signUpWithEmail:self.emailTextField.text
-                           password:self.passwordTextField.text
-                            success:^(UserViewModel *userViewModel) {
-                                dispatch_async(dispatch_get_main_queue(), ^{
-                                    [self segueToUserList:userViewModel];
-                                    [self hideButtons:NO];
-                                });
-                            } failure:^(NSString *errorMessage) {
-                                dispatch_async(dispatch_get_main_queue(), ^{
-                                    [self hideButtons:NO];
-                                    [self.view makeToastWithText:errorMessage];
-                                });
-                            }];
+    [self updateViewModelData];
+    [self.viewModel signup:^(UserViewModel *userViewModel) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self segueToUserList:userViewModel];
+            [self hideButtons:NO];
+        });
+    } failure:^(NSString *errorMSG) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self hideButtons:NO];
+            [self.view makeToastWithText:errorMSG];
+        });
+
+    }];
 }
 
 - (void)setRecognizers {
@@ -134,6 +131,11 @@
 
 - (void)segueToUserList:(UserViewModel *)userViewModel {
     NSLog(@"successfull authentication, segue to user list");
+}
+
+- (void)updateViewModelData {
+    self.viewModel.email = self.emailTextField.text;
+    self.viewModel.password = self.passwordTextField.text;
 }
 
 @end
