@@ -1,23 +1,23 @@
 PODS:
+  - DateTools (1.6.1)
   - JSQMessagesViewController (7.1.0):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
-  - NSDate-Extensions (0.0.1)
   - ObjectiveSugar (1.1.0)
   - QuickBlox (2.3.0.1)
   - Toast (2.4)
 
 DEPENDENCIES:
+  - DateTools
   - JSQMessagesViewController
-  - NSDate-Extensions
   - ObjectiveSugar (~> 1.1.0)
   - QuickBlox
   - Toast (~> 2.4)
 
 SPEC CHECKSUMS:
+  DateTools: 9bcc89e4f2f9004d8a7a2bd1b49269cf78968e65
   JSQMessagesViewController: ca11f86fa68ca70835f05e169df9244147c1dc40
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
-  NSDate-Extensions: cbd68ecf5cf8a150644e184b4521d7734fea5ace
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
   QuickBlox: 0c62fa9b6d9d5092b0f0f31b90eabeb7f854ceb5
   Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d

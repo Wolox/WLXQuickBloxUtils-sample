@@ -5,5 +5,5 @@ inhibit_all_warnings!
 pod 'ObjectiveSugar', '~> 1.1.0'
 pod 'JSQMessagesViewController'
 pod 'QuickBlox'
-pod 'NSDate-Extensions'
+pod 'DateTools'
 pod 'Toast', '~> 2.4'

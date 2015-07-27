@@ -14,3 +14,8 @@
 "password_not_valid" = "la contraseña es muy corta";
 "login_button_title" = "login";
 "signup_button_title" = "sign up";
+"user_fetching_error" = "hubo un error. Intente nuevamente más tarde.";
+"user_list_title" = "contactos";
+"conversation_list_title" = "conversationes";
+"conversation_fetching_error" = "hubo un error. Intente nuevamente más tarde.";
+"talk_button_title" = "Conversar";

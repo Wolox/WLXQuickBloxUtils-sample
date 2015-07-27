@@ -21,6 +21,10 @@
 		2DFA31D21B66963C0064EB94 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D11B66963C0064EB94 /* Application.m */; };
 		2DFA31D61B66964C0064EB94 /* UIView+MakeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D51B66964C0064EB94 /* UIView+MakeToast.m */; };
 		2DFA31DA1B669AC90064EB94 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D91B669AC90064EB94 /* LoginViewController.m */; };
+		2DFA31DD1B669DEB0064EB94 /* UserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31DC1B669DEB0064EB94 /* UserListViewModel.m */; };
+		2DFA31E01B669DFB0064EB94 /* UserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31DF1B669DFB0064EB94 /* UserListTableViewController.m */; };
+		2DFA31E31B66A0500064EB94 /* CollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */; };
+		2DFA32021B66CC4D0064EB94 /* TabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */; };
 		DC622D4610592A32A176F399 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,12 @@
 		2DFA31D51B66964C0064EB94 /* UIView+MakeToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MakeToast.m"; sourceTree = "<group>"; };
 		2DFA31D81B669AC90064EB94 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2DFA31D91B669AC90064EB94 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2DFA31DB1B669DEB0064EB94 /* UserListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewModel.h; sourceTree = "<group>"; };
+		2DFA31DC1B669DEB0064EB94 /* UserListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListViewModel.m; sourceTree = "<group>"; };
+		2DFA31E11B66A0500064EB94 /* CollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewModel.h; sourceTree = "<group>"; };
+		2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewModel.m; sourceTree = "<group>"; };
+		2DFA32001B66CC4D0064EB94 /* TabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewModel.h; sourceTree = "<group>"; };
+		2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewModel.m; sourceTree = "<group>"; };
 		302F48B23BEC552C62023089 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +110,12 @@
 				2D8C10271B5072C1000DAE2C /* LoginViewModel.m */,
 				2D8C10281B5072C1000DAE2C /* UserViewModel.h */,
 				2D8C10291B5072C1000DAE2C /* UserViewModel.m */,
+				2DFA31DB1B669DEB0064EB94 /* UserListViewModel.h */,
+				2DFA31DC1B669DEB0064EB94 /* UserListViewModel.m */,
+				2DFA31E11B66A0500064EB94 /* CollectionViewModel.h */,
+				2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */,
+				2DFA32001B66CC4D0064EB94 /* TabBarViewModel.h */,
+				2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -368,15 +384,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFA31E31B66A0500064EB94 /* CollectionViewModel.m in Sources */,
 				2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */,
 				2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */,
 				2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */,
 				2DFA31D21B66963C0064EB94 /* Application.m in Sources */,
 				2D8C102A1B5072C1000DAE2C /* LoginViewModel.m in Sources */,
 				2DFA31DA1B669AC90064EB94 /* LoginViewController.m in Sources */,
+				2DFA32021B66CC4D0064EB94 /* TabBarViewModel.m in Sources */,
 				2DAAC1C01B5036440032584C /* main.m in Sources */,
 				2DFA31D61B66964C0064EB94 /* UIView+MakeToast.m in Sources */,
 				2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */,
+				2DFA31DD1B669DEB0064EB94 /* UserListViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

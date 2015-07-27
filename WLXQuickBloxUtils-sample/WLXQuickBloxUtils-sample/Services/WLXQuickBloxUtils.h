@@ -142,11 +142,13 @@ typedef enum {
  
  @param page The requested page's number.
  @param amount The maximum amount of records to fetch.
+@param queryParams Extra parameters. Can be nil. Parameters should be formatted as QuickBlox documentation indicates.
  @param success A block object to be executed when the request finishes successfully. This block has no return value and takes one argument: a NSArray
  @param failure A block object to be executed when the request fails. This block has no return value and takes one argument: a NSError.
  */
 - (void)retrieveAllUsersFromPage:(NSUInteger)page
                           amount:(NSUInteger)amount
+                   queryParams:(NSDictionary *)parameters
                          success:(void(^)(NSArray *))success
                          failure:(void(^)(NSError *))failure;
 
