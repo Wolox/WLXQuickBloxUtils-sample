@@ -37,6 +37,7 @@
 #pragma mark - IBActions
 
 - (IBAction)loginButtonPressed:(id)sender {
+    [self updateViewModelData];
     [self validateFieldsWithValidBlock:^{
         [self hideButtons:YES];
         [self performLogin];
@@ -44,6 +45,7 @@
 }
 
 - (IBAction)signupButtonPressed:(id)sender {
+    [self updateViewModelData];
     [self validateFieldsWithValidBlock:^{
         [self hideButtons:YES];
         [self performSignUp];
@@ -94,7 +96,6 @@
 }
 
 - (void)performLogin {
-    [self updateViewModelData];
     [self.viewModel login:^(UserViewModel *userViewModel){
         dispatch_async(dispatch_get_main_queue(), ^{
             [self segueToUserList:userViewModel];
@@ -109,7 +110,6 @@
 }
 
 - (void)performSignUp {
-    [self updateViewModelData];
     [self.viewModel signup:^(UserViewModel *userViewModel) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self segueToUserList:userViewModel];
