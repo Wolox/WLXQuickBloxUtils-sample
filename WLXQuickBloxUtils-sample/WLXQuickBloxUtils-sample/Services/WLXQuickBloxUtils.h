@@ -85,6 +85,10 @@ typedef enum {
  */
 - (void)logout;
 
+/**
+ Returns a boolean for the user's authentication state
+ */
+- (BOOL)isLoggedIn;
 
 /**
  Creates a new private dialog. If private dialog exists, it returns that dialog.
