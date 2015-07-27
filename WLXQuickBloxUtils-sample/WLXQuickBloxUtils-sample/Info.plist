@@ -36,5 +36,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>QB_ACCOUNT_KEY</key>
+	<string>${QB_ACCOUNT_KEY}</string>
+	<key>QB_APP_ID</key>
+	<string>${QB_APP_ID}</string>
+	<key>QB_SERVICE_KEY</key>
+	<string>${QB_SERVICE_KEY}</string>
+	<key>QB_SERVICE_SECRET</key>
+	<string>${QB_SERVICE_SECRET}</string>
 </dict>
 </plist>

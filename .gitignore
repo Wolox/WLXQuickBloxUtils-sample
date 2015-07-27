@@ -11,6 +11,7 @@ build/*
 *.mode1
 *.mode2v3
 *.mode1v3
+*.xccheckout
 xcuserdata
 Snapshots
 test-reports/
@@ -22,3 +23,4 @@ Thumbs.db
 # CocoaPods noise
 Pods/
 builds
+
