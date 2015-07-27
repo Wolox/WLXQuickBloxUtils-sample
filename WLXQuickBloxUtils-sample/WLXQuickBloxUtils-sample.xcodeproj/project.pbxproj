@@ -21,6 +21,7 @@
 		2DDC3AAE1B61A2AD00951E5A /* NSString+capitalizeFirstWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC3AAB1B61A2AD00951E5A /* NSString+capitalizeFirstWord.m */; };
 		2DDC3AAF1B61A2AD00951E5A /* UIView+makeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC3AAD1B61A2AD00951E5A /* UIView+makeToast.m */; };
 		2DDC3AB91B61A47200951E5A /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDC3AB81B61A47200951E5A /* Application.m */; };
+		2DFA31C91B6688730064EB94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA31C81B6688730064EB94 /* Localizable.strings */; };
 		DC622D4610592A32A176F399 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		2DDC3AAD1B61A2AD00951E5A /* UIView+makeToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+makeToast.m"; sourceTree = "<group>"; };
 		2DDC3AB71B61A47200951E5A /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		2DDC3AB81B61A47200951E5A /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		2DFA31C81B6688730064EB94 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		302F48B23BEC552C62023089 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 		2DAAC1BD1B5036440032584C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DFA31C81B6688730064EB94 /* Localizable.strings */,
 				2DAAC1BE1B5036440032584C /* Info.plist */,
 				2DAAC1BF1B5036440032584C /* main.m */,
 			);
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DAAC1F71B5038230032584C /* Main.storyboard in Resources */,
+				2DFA31C91B6688730064EB94 /* Localizable.strings in Resources */,
 				2DAAC1CE1B5036440032584C /* LaunchScreen.xib in Resources */,
 				2DAAC1CB1B5036440032584C /* Images.xcassets in Resources */,
 			);

@@ -13,4 +13,4 @@
 "email_not_valid" = "el formato del email es inválido";
 "password_not_valid" = "la contraseña es muy corta";
 "login_button_title" = "login";
-"signup_button_title" = "signup";
+"signup_button_title" = "sign up";
