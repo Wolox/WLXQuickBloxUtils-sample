@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  WLXQuickBloxUtils-sample
+
+  Created by Damian on 7/10/15.
+  Copyright (c) 2015 Wolox. All rights reserved.
+*/
+
+"email" = "email";
+"password" = "password";
+"login_error" = "hubo un error. Intente nuevamente más tarde.";
+"signup_error" = "hubo un error creando la cuenta. Intente nuevamente más tarde.";
+"email_not_valid" = "el formato del email es inválido";
+"password_not_valid" = "la contraseña es muy corta";
+"login_button_title" = "login";
+"signup_button_title" = "sign up";

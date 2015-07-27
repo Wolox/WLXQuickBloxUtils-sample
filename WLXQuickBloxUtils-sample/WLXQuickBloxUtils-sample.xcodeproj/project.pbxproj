@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D8C102A1B5072C1000DAE2C /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C10271B5072C1000DAE2C /* LoginViewModel.m */; };
+		2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C10291B5072C1000DAE2C /* UserViewModel.m */; };
+		2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C102E1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m */; };
 		2DAAC1C01B5036440032584C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1BF1B5036440032584C /* main.m */; };
 		2DAAC1CB1B5036440032584C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1CA1B5036440032584C /* Images.xcassets */; };
 		2DAAC1CE1B5036440032584C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1CC1B5036440032584C /* LaunchScreen.xib */; };
@@ -14,8 +17,10 @@
 		2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1EC1B5038230032584C /* AppDelegate.m */; };
 		2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1EF1B5038230032584C /* WLXQuickBloxUtils.m */; };
 		2DAAC1F71B5038230032584C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1F11B5038230032584C /* Main.storyboard */; };
-		2DAAC1F81B5038230032584C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1F41B5038230032584C /* LoginViewController.m */; };
+		2DFA31C91B6688730064EB94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA31C81B6688730064EB94 /* Localizable.strings */; };
 		2DFA31D21B66963C0064EB94 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D11B66963C0064EB94 /* Application.m */; };
+		2DFA31D61B66964C0064EB94 /* UIView+MakeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D51B66964C0064EB94 /* UIView+MakeToast.m */; };
+		2DFA31DA1B669AC90064EB94 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D91B669AC90064EB94 /* LoginViewController.m */; };
 		DC622D4610592A32A176F399 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,12 @@
 
 /* Begin PBXFileReference section */
 		0049314DB306F0B534939661 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2D8C10261B5072C1000DAE2C /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		2D8C10271B5072C1000DAE2C /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		2D8C10281B5072C1000DAE2C /* UserViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewModel.h; sourceTree = "<group>"; };
+		2D8C10291B5072C1000DAE2C /* UserViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewModel.m; sourceTree = "<group>"; };
+		2D8C102D1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CapitalizeFirstWord.h"; sourceTree = "<group>"; };
+		2D8C102E1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CapitalizeFirstWord.m"; sourceTree = "<group>"; };
 		2DAAC1BA1B5036440032584C /* WLXQuickBloxUtils-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WLXQuickBloxUtils-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAAC1BE1B5036440032584C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DAAC1BF1B5036440032584C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,10 +55,13 @@
 		2DAAC1EE1B5038230032584C /* WLXQuickBloxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLXQuickBloxUtils.h; sourceTree = "<group>"; };
 		2DAAC1EF1B5038230032584C /* WLXQuickBloxUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLXQuickBloxUtils.m; sourceTree = "<group>"; };
 		2DAAC1F11B5038230032584C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2DAAC1F31B5038230032584C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		2DAAC1F41B5038230032584C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2DFA31C81B6688730064EB94 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2DFA31D01B66963C0064EB94 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		2DFA31D11B66963C0064EB94 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		2DFA31D41B66964C0064EB94 /* UIView+MakeToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MakeToast.h"; sourceTree = "<group>"; };
+		2DFA31D51B66964C0064EB94 /* UIView+MakeToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MakeToast.m"; sourceTree = "<group>"; };
+		2DFA31D81B669AC90064EB94 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2DFA31D91B669AC90064EB94 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		302F48B23BEC552C62023089 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +93,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2D8C10251B5072C1000DAE2C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2D8C10261B5072C1000DAE2C /* LoginViewModel.h */,
+				2D8C10271B5072C1000DAE2C /* LoginViewModel.m */,
+				2D8C10281B5072C1000DAE2C /* UserViewModel.h */,
+				2D8C10291B5072C1000DAE2C /* UserViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2D8C102C1B5073D3000DAE2C /* Foundation categories */ = {
+			isa = PBXGroup;
+			children = (
+				2D8C102D1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.h */,
+				2D8C102E1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m */,
+			);
+			path = "Foundation categories";
+			sourceTree = "<group>";
+		};
 		2DAAC1B11B5036440032584C = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +136,13 @@
 		2DAAC1BC1B5036440032584C /* WLXQuickBloxUtils-sample */ = {
 			isa = PBXGroup;
 			children = (
+				2DFA31D31B66964C0064EB94 /* UIKit categories */,
+				2D8C102C1B5073D3000DAE2C /* Foundation categories */,
 				2DAAC1EA1B5038230032584C /* AppDelegate */,
 				2DAAC1ED1B5038230032584C /* Services */,
 				2DAAC1F01B5038230032584C /* Storyboards */,
-				2DAAC1F21B5038230032584C /* ViewControllers */,
+				2D8C10251B5072C1000DAE2C /* ViewModels */,
+				2DFA31D71B669AC90064EB94 /* ViewControllers */,
 				2DAAC1CA1B5036440032584C /* Images.xcassets */,
 				2DAAC1CC1B5036440032584C /* LaunchScreen.xib */,
 				2DAAC1BD1B5036440032584C /* Supporting Files */,
@@ -116,6 +153,7 @@
 		2DAAC1BD1B5036440032584C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DFA31C81B6688730064EB94 /* Localizable.strings */,
 				2DAAC1BE1B5036440032584C /* Info.plist */,
 				2DAAC1BF1B5036440032584C /* main.m */,
 			);
@@ -167,11 +205,20 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		2DAAC1F21B5038230032584C /* ViewControllers */ = {
+		2DFA31D31B66964C0064EB94 /* UIKit categories */ = {
 			isa = PBXGroup;
 			children = (
-				2DAAC1F31B5038230032584C /* LoginViewController.h */,
-				2DAAC1F41B5038230032584C /* LoginViewController.m */,
+				2DFA31D41B66964C0064EB94 /* UIView+MakeToast.h */,
+				2DFA31D51B66964C0064EB94 /* UIView+MakeToast.m */,
+			);
+			path = "UIKit categories";
+			sourceTree = "<group>";
+		};
+		2DFA31D71B669AC90064EB94 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DFA31D81B669AC90064EB94 /* LoginViewController.h */,
+				2DFA31D91B669AC90064EB94 /* LoginViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -268,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DAAC1F71B5038230032584C /* Main.storyboard in Resources */,
+				2DFA31C91B6688730064EB94 /* Localizable.strings in Resources */,
 				2DAAC1CE1B5036440032584C /* LaunchScreen.xib in Resources */,
 				2DAAC1CB1B5036440032584C /* Images.xcassets in Resources */,
 			);
@@ -320,11 +368,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DAAC1F81B5038230032584C /* LoginViewController.m in Sources */,
 				2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */,
+				2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */,
 				2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */,
 				2DFA31D21B66963C0064EB94 /* Application.m in Sources */,
+				2D8C102A1B5072C1000DAE2C /* LoginViewModel.m in Sources */,
+				2DFA31DA1B669AC90064EB94 /* LoginViewController.m in Sources */,
 				2DAAC1C01B5036440032584C /* main.m in Sources */,
+				2DFA31D61B66964C0064EB94 /* UIView+MakeToast.m in Sources */,
+				2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
