@@ -10,7 +10,7 @@
 
 @implementation NSString (CapitalizeFirstWord)
 
-- (NSString*)CapitalizeFirstWord {
+- (NSString*)capitalizeFirstWord {
     if(self.length == 0) {
         return self;
     }

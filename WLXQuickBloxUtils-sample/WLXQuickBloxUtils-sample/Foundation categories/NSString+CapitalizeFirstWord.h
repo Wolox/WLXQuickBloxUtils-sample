@@ -10,6 +10,6 @@
 
 @interface NSString (CapitalizeFirstWord)
 
-- (NSString*)CapitalizeFirstWord;
+- (NSString*)capitalizeFirstWord;
 
 @end

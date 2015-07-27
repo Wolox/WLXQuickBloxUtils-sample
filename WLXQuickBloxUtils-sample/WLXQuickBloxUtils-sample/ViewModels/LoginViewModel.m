@@ -23,10 +23,10 @@
 - (instancetype)initWithQuickbloxUtils:(WLXQuickBloxUtils *)quickbloxUtils {
     self = [super init];
     if(self) {
-        _emailPlaceholder = [NSLocalizedString(@"email", nil) CapitalizeFirstWord];
-        _passwordPlaceholder = [NSLocalizedString(@"password", nil) CapitalizeFirstWord];
-        _loginButtonTitle = [NSLocalizedString(@"login_button_title", nil) CapitalizeFirstWord];
-        _signUpButtonTitle = [NSLocalizedString(@"signup_button_title", nil) CapitalizeFirstWord];
+        _emailPlaceholder = [NSLocalizedString(@"email", nil) capitalizeFirstWord];
+        _passwordPlaceholder = [NSLocalizedString(@"password", nil) capitalizeFirstWord];
+        _loginButtonTitle = [NSLocalizedString(@"login_button_title", nil) capitalizeFirstWord];
+        _signUpButtonTitle = [NSLocalizedString(@"signup_button_title", nil) capitalizeFirstWord];
         _quickbloxUtils = quickbloxUtils;
     }
     return self;
@@ -43,7 +43,7 @@
                                              }
                                          } failure:^(NSError *error) {
                                              if(failure) {
-                                                 failure([NSLocalizedString(@"login_error", nil) CapitalizeFirstWord]);
+                                                 failure([NSLocalizedString(@"login_error", nil) capitalizeFirstWord]);
                                              }
                                          }];
 }
@@ -59,7 +59,7 @@
                                              }
                                          } failure:^(NSError *error) {
                                              if(failure) {
-                                                 failure([NSLocalizedString(@"signup_error", nil) CapitalizeFirstWord]);
+                                                 failure([NSLocalizedString(@"signup_error", nil) capitalizeFirstWord]);
                                              }
                                          }];
 }
@@ -71,7 +71,7 @@
         afterValidateBlock(YES, nil);
     } else {
         NSString *errorMessageKey = validEmail ? @"password_not_valid" : @"email_not_valid";
-        afterValidateBlock(NO, [NSLocalizedString(errorMessageKey, nil) CapitalizeFirstWord]);
+        afterValidateBlock(NO, [NSLocalizedString(errorMessageKey, nil) capitalizeFirstWord]);
     }
 }
 

@@ -17,7 +17,6 @@
 		2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1EC1B5038230032584C /* AppDelegate.m */; };
 		2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1EF1B5038230032584C /* WLXQuickBloxUtils.m */; };
 		2DAAC1F71B5038230032584C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1F11B5038230032584C /* Main.storyboard */; };
-		2DAAC1F81B5038230032584C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1F41B5038230032584C /* LoginViewController.m */; };
 		2DFA31C91B6688730064EB94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA31C81B6688730064EB94 /* Localizable.strings */; };
 		2DFA31D21B66963C0064EB94 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D11B66963C0064EB94 /* Application.m */; };
 		DC622D4610592A32A176F399 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
@@ -54,8 +53,6 @@
 		2DAAC1EE1B5038230032584C /* WLXQuickBloxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLXQuickBloxUtils.h; sourceTree = "<group>"; };
 		2DAAC1EF1B5038230032584C /* WLXQuickBloxUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLXQuickBloxUtils.m; sourceTree = "<group>"; };
 		2DAAC1F11B5038230032584C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		2DAAC1F31B5038230032584C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		2DAAC1F41B5038230032584C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2DFA31C81B6688730064EB94 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2DFA31D01B66963C0064EB94 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		2DFA31D11B66963C0064EB94 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
@@ -138,7 +135,6 @@
 				2DAAC1ED1B5038230032584C /* Services */,
 				2DAAC1F01B5038230032584C /* Storyboards */,
 				2D8C10251B5072C1000DAE2C /* ViewModels */,
-				2DAAC1F21B5038230032584C /* ViewControllers */,
 				2DAAC1CA1B5036440032584C /* Images.xcassets */,
 				2DAAC1CC1B5036440032584C /* LaunchScreen.xib */,
 				2DAAC1BD1B5036440032584C /* Supporting Files */,
@@ -199,15 +195,6 @@
 				2DAAC1F11B5038230032584C /* Main.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		2DAAC1F21B5038230032584C /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				2DAAC1F31B5038230032584C /* LoginViewController.h */,
-				2DAAC1F41B5038230032584C /* LoginViewController.m */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FCC6580AF82AD9046EB98A29 /* Pods */ = {
@@ -355,7 +342,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DAAC1F81B5038230032584C /* LoginViewController.m in Sources */,
 				2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */,
 				2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */,
 				2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */,
