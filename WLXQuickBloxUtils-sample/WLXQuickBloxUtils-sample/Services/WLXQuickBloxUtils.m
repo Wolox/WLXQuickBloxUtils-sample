@@ -38,6 +38,7 @@ NSString *const QBPrivateChatMessageCreationFailedNotification = @"privateChatMe
         [QBSettings setLogLevel:QBLogLevelDebug];
         [QBChat instance].autoReconnectEnabled = YES;
         [[QBChat instance] addDelegate:self];
+        [QBChat instance].streamManagementEnabled = YES;
         self.dialogTypeMapping = @{@(DialogTypePrivate):@(QBChatDialogTypePrivate),
                                    @(DialogTypePublicGroup):@(QBChatDialogTypePublicGroup),
                                    @(DialogTypeGroup):@(DialogTypeGroup)};
@@ -224,9 +225,17 @@ NSString *const QBPrivateChatMessageCreationFailedNotification = @"privateChatMe
 
 #pragma mark - Message methods
 
-- (void)sendMessageToDialog:(QBChatDialog *)dialog text:(NSString *)text saveToHistory:(BOOL)saveToHistory {
+- (void)sendMessageToDialog:(QBChatDialog *)dialog text:(NSString *)text saveToHistory:(BOOL)saveToHistory success:(void(^)())success failure:(void(^)(NSError *))failure {
     QBChatMessage *message = [self messageWithText:text saveToHistory:saveToHistory];
-    [dialog sendMessage:message];
+    [dialog sendMessage:message sentBlock:^(NSError *error) {
+        if(error) {
+            if(failure) {
+                failure(error);
+            }
+        } else {
+            success();
+        }
+    }];
 }
 
 #pragma mark - Block User
@@ -304,27 +313,25 @@ NSString *const QBPrivateChatMessageCreationFailedNotification = @"privateChatMe
 
 #pragma mark - Push methods
 
-- (void)sendPushWithAlertText:(NSString *)alertText messageText:(NSString *)message dialogId:(NSString *)dialogId qbIds:(NSArray *)qbIds success:(void(^)())success failure:(void(^)(NSError *))failure {
-    NSString *stringIds = [qbIds join:@","];
+- (void)sendPushWithDictionary:(NSDictionary *)params toUsersWithQbIds:(NSArray *)qbIds success:(void(^)())success failure:(void(^)(NSError *))failure {
+    QBMEvent *event = [QBMEvent event];
+    event.notificationType = QBMNotificationTypePush;
+    event.usersIDs = [qbIds join:@","];
+    event.isDevelopmentEnvironment = ![QBApplication sharedApplication].productionEnvironmentForPushesEnabled;
+    event.type = QBMEventTypeOneShot;
     
-    NSMutableDictionary *payload = [NSMutableDictionary dictionary];
-    NSMutableDictionary *aps = [NSMutableDictionary dictionary];
-    [aps setObject:@"default" forKey:QBMPushMessageSoundKey];
-    [aps setObject:alertText forKey:QBMPushMessageAlertKey];
-    [aps setObject:dialogId forKey:@"dialogId"];
-    [aps setObject:message forKey:@"lastMessage"];
-    [aps setObject:QBPush forKey:kPushTypeKey];
-    [payload setObject:aps forKey:QBMPushMessageApsKey];
+    NSError *error = nil;
+    NSData *sendData = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:&error];
+    NSString *jsonString = [[NSString alloc] initWithData:sendData encoding:NSUTF8StringEncoding];
+    event.message = jsonString;
     
-    QBMPushMessage *pushMessage = [[QBMPushMessage alloc] initWithPayload:payload];
-    
-    [QBRequest sendPush:pushMessage toUsers:stringIds successBlock:^(QBResponse *response, QBMEvent *event) {
+    [QBRequest createEvent:event successBlock:^(QBResponse *response, NSArray *events) {
         if(success) {
             success();
         }
-    } errorBlock:^(QBError *error) {
+    } errorBlock:^(QBResponse *response) {
         if(failure) {
-            failure(error.error);
+            failure(response.error.error);
         }
     }];
 }

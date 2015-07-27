@@ -22,3 +22,4 @@
 "message_fetching_error" = "hubo un error. Intente nuevamente más tarde.";
 "create_dialog_error" = "hubo un error creando la conversación. Intente nuevamente más tarde.";
 "back" = "volver";
+"@% sent you a message" = "%@ te ha enviado un mensaje";
