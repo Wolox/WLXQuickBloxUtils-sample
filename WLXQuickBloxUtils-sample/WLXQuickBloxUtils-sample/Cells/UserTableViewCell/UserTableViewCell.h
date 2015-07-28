@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "UserViewModel.h"
+#import "UserTableViewCellDelegate.h"
 
 @interface UserTableViewCell : UITableViewCell
 
-- (void)populateWithViewModel:(UserViewModel *)viewModel;
+- (void)populateWithViewModel:(UserViewModel *)viewModel delegate:(id<UserTableViewCellDelegate>)delegate indexPath:(NSIndexPath *)indexPath;
 
 @end

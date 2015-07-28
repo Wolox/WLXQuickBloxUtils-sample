@@ -134,10 +134,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="DJC-Bp-R9m"/>
+                    <connections>
+                        <segue destination="uNQ-X1-BH1" kind="show" identifier="startConversationSegue" id="Alu-Bi-PyT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFs-ce-f76" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1324" y="24"/>
+        </scene>
+        <!--Conversation View Controller-->
+        <scene sceneID="lZi-od-IYQ">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="uNQ-X1-BH1" customClass="ConversationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kVJ-L4-d6M"/>
+                        <viewControllerLayoutGuide type="bottom" id="1fX-jP-HmE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TK8-ZX-Kg7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siS-SN-sOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2291" y="24"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="loR-RK-NTb">
