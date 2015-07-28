@@ -28,6 +28,7 @@
         _loginButtonTitle = [NSLocalizedString(@"login_button_title", nil) capitalizeFirstWord];
         _signUpButtonTitle = [NSLocalizedString(@"signup_button_title", nil) capitalizeFirstWord];
         _quickbloxUtils = quickbloxUtils;
+        _tabBarViewModel = [[TabBarViewModel alloc] initWithQuickbloxUtils:_quickbloxUtils];
     }
     return self;
 }

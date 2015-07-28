@@ -164,18 +164,24 @@
     }];
 }
 
-- (void)retrieveAllUsersFromPage:(NSUInteger)page amount:(NSUInteger)amount success:(void(^)(NSArray *))success failure:(void(^)(NSError *))failure {
+- (void)retrieveAllUsersFromPage:(NSUInteger)page amount:(NSUInteger)amount queryParams:(NSDictionary *)parameters success:(void(^)(NSArray *))success failure:(void(^)(NSError *))failure {
     QBGeneralResponsePage *resPage = [QBGeneralResponsePage responsePageWithCurrentPage:page perPage:amount];
-    [QBRequest usersForPage:resPage
-               successBlock:^(QBResponse *response, QBGeneralResponsePage *page, NSArray *users) {
-                   if(success) {
-                       success(users);
-                   }
-               } errorBlock:^(QBResponse *response) {
-                   if(failure) {
-                       failure(response.error.error);
-                   }
-               }];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"id[ne]":@([QBSession currentSession].currentUser.ID)}];
+//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    if(parameters) {
+        [params addEntriesFromDictionary:parameters];
+    }
+    [QBRequest usersWithExtendedRequest:params
+                                   page:resPage
+                           successBlock:^(QBResponse *response, QBGeneralResponsePage *page, NSArray *users) {
+                               if(success) {
+                                   success(users);
+                               }
+                           } errorBlock:^(QBResponse *response) {
+                               if(failure) {
+                                   failure(response.error.error);
+                               }
+                           }];
 }
 
 #pragma mark - Update / Delete methods

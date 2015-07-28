@@ -7,6 +7,7 @@
 //
 
 #import "UserViewModel.h"
+#import "NSString+CapitalizeFirstWord.h"
 
 @interface UserViewModel ()
 
@@ -20,8 +21,13 @@
     self = [super init];
     if(self) {
         _user = user;
+        _talkButtonTitle = [NSLocalizedString(@"talk_button_title", nil) capitalizeFirstWord];
     }
     return self;
+}
+
+- (NSString *)email {
+    return self.user.login;
 }
 
 @end

@@ -11,6 +11,10 @@
 
 @interface UserViewModel : NSObject
 
+@property (strong, nonatomic) NSString *talkButtonTitle;
+
 - (instancetype)initWithQBUUser:(QBUUser *)user;
+
+- (NSString *)email;
 
 @end

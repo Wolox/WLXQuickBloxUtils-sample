@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UserViewModel.h"
+#import "TabBarViewModel.h"
 
 @interface LoginViewModel : NSObject
 
@@ -18,6 +19,8 @@
 
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *password;
+
+@property (strong, nonatomic) TabBarViewModel *tabBarViewModel;
 
 - (instancetype)initWithQuickbloxUtils:(WLXQuickBloxUtils *)quickbloxUtils;
 

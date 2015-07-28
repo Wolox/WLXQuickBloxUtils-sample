@@ -10,6 +10,10 @@
 #import "LoginViewModel.h"
 #import "UIView+MakeToast.h"
 #import "Application.h"
+#import "UserListTableViewController.h"
+#import "TabBarController.h"
+
+NSString *const TabBarSegueId = @"TabBarSegue";
 
 @interface LoginViewController ()
 
@@ -130,12 +134,22 @@
 }
 
 - (void)segueToUserList:(UserViewModel *)userViewModel {
-    NSLog(@"successfull authentication, segue to user list");
+    [self performSegueWithIdentifier:TabBarSegueId sender:self];
 }
 
 - (void)updateViewModelData {
     self.viewModel.password = self.passwordTextField.text;
     self.viewModel.email = self.emailTextField.text;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *segueIdentifier = [segue identifier];
+    if([segueIdentifier isEqualToString:TabBarSegueId]) {
+        TabBarController *tabBarController = [segue destinationViewController];
+        tabBarController.viewModel = self.viewModel.tabBarViewModel;
+    }
 }
 
 @end

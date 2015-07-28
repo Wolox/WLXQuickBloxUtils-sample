@@ -21,6 +21,15 @@
 		2DFA31D21B66963C0064EB94 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D11B66963C0064EB94 /* Application.m */; };
 		2DFA31D61B66964C0064EB94 /* UIView+MakeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D51B66964C0064EB94 /* UIView+MakeToast.m */; };
 		2DFA31DA1B669AC90064EB94 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31D91B669AC90064EB94 /* LoginViewController.m */; };
+		2DFA31DD1B669DEB0064EB94 /* UserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31DC1B669DEB0064EB94 /* UserListViewModel.m */; };
+		2DFA31E01B669DFB0064EB94 /* UserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31DF1B669DFB0064EB94 /* UserListTableViewController.m */; };
+		2DFA31E31B66A0500064EB94 /* CollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */; };
+		2DFA31F11B66BE9F0064EB94 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31F01B66BE9F0064EB94 /* UserTableViewCell.m */; };
+		2DFA31F31B66BEB80064EB94 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA31F21B66BEB80064EB94 /* UserTableViewCell.xib */; };
+		2DFA31F61B66C0C40064EB94 /* UITableViewController+RegisterNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31F51B66C0C40064EB94 /* UITableViewController+RegisterNib.m */; };
+		2DFA31FC1B66C8D30064EB94 /* UINavigationController+RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31FB1B66C8D30064EB94 /* UINavigationController+RootViewController.m */; };
+		2DFA31FF1B66CB020064EB94 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31FE1B66CB020064EB94 /* TabBarController.m */; };
+		2DFA32021B66CC4D0064EB94 /* TabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */; };
 		DC622D4610592A32A176F399 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +71,24 @@
 		2DFA31D51B66964C0064EB94 /* UIView+MakeToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MakeToast.m"; sourceTree = "<group>"; };
 		2DFA31D81B669AC90064EB94 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2DFA31D91B669AC90064EB94 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2DFA31DB1B669DEB0064EB94 /* UserListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewModel.h; sourceTree = "<group>"; };
+		2DFA31DC1B669DEB0064EB94 /* UserListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListViewModel.m; sourceTree = "<group>"; };
+		2DFA31DE1B669DFB0064EB94 /* UserListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListTableViewController.h; sourceTree = "<group>"; };
+		2DFA31DF1B669DFB0064EB94 /* UserListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListTableViewController.m; sourceTree = "<group>"; };
+		2DFA31E11B66A0500064EB94 /* CollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewModel.h; sourceTree = "<group>"; };
+		2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewModel.m; sourceTree = "<group>"; };
+		2DFA31EF1B66BE9F0064EB94 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserTableViewCell.h; path = Cells/UserTableViewCell/UserTableViewCell.h; sourceTree = "<group>"; };
+		2DFA31F01B66BE9F0064EB94 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserTableViewCell.m; path = Cells/UserTableViewCell/UserTableViewCell.m; sourceTree = "<group>"; };
+		2DFA31F21B66BEB80064EB94 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		2DFA31F41B66C0C40064EB94 /* UITableViewController+RegisterNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+RegisterNib.h"; sourceTree = "<group>"; };
+		2DFA31F51B66C0C40064EB94 /* UITableViewController+RegisterNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+RegisterNib.m"; sourceTree = "<group>"; };
+		2DFA31FA1B66C8D30064EB94 /* UINavigationController+RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+RootViewController.h"; sourceTree = "<group>"; };
+		2DFA31FB1B66C8D30064EB94 /* UINavigationController+RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+RootViewController.m"; sourceTree = "<group>"; };
+		2DFA31FD1B66CB020064EB94 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		2DFA31FE1B66CB020064EB94 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		2DFA32001B66CC4D0064EB94 /* TabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewModel.h; sourceTree = "<group>"; };
+		2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewModel.m; sourceTree = "<group>"; };
+		2DFA32031B66D4010064EB94 /* TabBarItemViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarItemViewControllerProtocol.h; path = Protocols/TabBarItemViewControllerProtocol.h; sourceTree = "<group>"; };
 		302F48B23BEC552C62023089 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +127,12 @@
 				2D8C10271B5072C1000DAE2C /* LoginViewModel.m */,
 				2D8C10281B5072C1000DAE2C /* UserViewModel.h */,
 				2D8C10291B5072C1000DAE2C /* UserViewModel.m */,
+				2DFA31DB1B669DEB0064EB94 /* UserListViewModel.h */,
+				2DFA31DC1B669DEB0064EB94 /* UserListViewModel.m */,
+				2DFA31E11B66A0500064EB94 /* CollectionViewModel.h */,
+				2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */,
+				2DFA32001B66CC4D0064EB94 /* TabBarViewModel.h */,
+				2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -136,6 +169,7 @@
 		2DAAC1BC1B5036440032584C /* WLXQuickBloxUtils-sample */ = {
 			isa = PBXGroup;
 			children = (
+				2DFA31ED1B66BE6A0064EB94 /* Cells */,
 				2DFA31D31B66964C0064EB94 /* UIKit categories */,
 				2D8C102C1B5073D3000DAE2C /* Foundation categories */,
 				2DAAC1EA1B5038230032584C /* AppDelegate */,
@@ -210,6 +244,10 @@
 			children = (
 				2DFA31D41B66964C0064EB94 /* UIView+MakeToast.h */,
 				2DFA31D51B66964C0064EB94 /* UIView+MakeToast.m */,
+				2DFA31F41B66C0C40064EB94 /* UITableViewController+RegisterNib.h */,
+				2DFA31F51B66C0C40064EB94 /* UITableViewController+RegisterNib.m */,
+				2DFA31FA1B66C8D30064EB94 /* UINavigationController+RootViewController.h */,
+				2DFA31FB1B66C8D30064EB94 /* UINavigationController+RootViewController.m */,
 			);
 			path = "UIKit categories";
 			sourceTree = "<group>";
@@ -217,10 +255,41 @@
 		2DFA31D71B669AC90064EB94 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2DFA32041B66D4070064EB94 /* Protocol */,
 				2DFA31D81B669AC90064EB94 /* LoginViewController.h */,
 				2DFA31D91B669AC90064EB94 /* LoginViewController.m */,
+				2DFA31DE1B669DFB0064EB94 /* UserListTableViewController.h */,
+				2DFA31DF1B669DFB0064EB94 /* UserListTableViewController.m */,
+				2DFA31FD1B66CB020064EB94 /* TabBarController.h */,
+				2DFA31FE1B66CB020064EB94 /* TabBarController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2DFA31ED1B66BE6A0064EB94 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2DFA31EE1B66BE740064EB94 /* UserTableViewCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		2DFA31EE1B66BE740064EB94 /* UserTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DFA31EF1B66BE9F0064EB94 /* UserTableViewCell.h */,
+				2DFA31F01B66BE9F0064EB94 /* UserTableViewCell.m */,
+				2DFA31F21B66BEB80064EB94 /* UserTableViewCell.xib */,
+			);
+			name = UserTableViewCell;
+			sourceTree = "<group>";
+		};
+		2DFA32041B66D4070064EB94 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2DFA32031B66D4010064EB94 /* TabBarItemViewControllerProtocol.h */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 		FCC6580AF82AD9046EB98A29 /* Pods */ = {
@@ -318,6 +387,7 @@
 				2DFA31C91B6688730064EB94 /* Localizable.strings in Resources */,
 				2DAAC1CE1B5036440032584C /* LaunchScreen.xib in Resources */,
 				2DAAC1CB1B5036440032584C /* Images.xcassets in Resources */,
+				2DFA31F31B66BEB80064EB94 /* UserTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,15 +438,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFA31F61B66C0C40064EB94 /* UITableViewController+RegisterNib.m in Sources */,
+				2DFA31F11B66BE9F0064EB94 /* UserTableViewCell.m in Sources */,
+				2DFA31FF1B66CB020064EB94 /* TabBarController.m in Sources */,
+				2DFA31E31B66A0500064EB94 /* CollectionViewModel.m in Sources */,
 				2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */,
 				2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */,
 				2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */,
+				2DFA31FC1B66C8D30064EB94 /* UINavigationController+RootViewController.m in Sources */,
 				2DFA31D21B66963C0064EB94 /* Application.m in Sources */,
 				2D8C102A1B5072C1000DAE2C /* LoginViewModel.m in Sources */,
 				2DFA31DA1B669AC90064EB94 /* LoginViewController.m in Sources */,
+				2DFA32021B66CC4D0064EB94 /* TabBarViewModel.m in Sources */,
 				2DAAC1C01B5036440032584C /* main.m in Sources */,
 				2DFA31D61B66964C0064EB94 /* UIView+MakeToast.m in Sources */,
 				2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */,
+				2DFA31DD1B669DEB0064EB94 /* UserListViewModel.m in Sources */,
+				2DFA31E01B669DFB0064EB94 /* UserListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
