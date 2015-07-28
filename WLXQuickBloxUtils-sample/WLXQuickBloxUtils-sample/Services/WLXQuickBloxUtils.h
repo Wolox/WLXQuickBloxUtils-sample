@@ -17,6 +17,11 @@
 
 #define QBPush @"QBPush"
 
+extern NSString *const QBGroupChatMessageReceivedNotification;
+extern NSString *const QBGroupChatMessageCreationFailedNotification;
+extern NSString *const QBPrivateChatMessageReceivedNotification;
+extern NSString *const QBPrivateChatMessageCreationFailedNotification;
+
 typedef enum {
     DialogTypePublicGroup = 1,
     DialogTypeGroup = 2,
@@ -95,12 +100,14 @@ typedef enum {
  
  @param occupants The dialog's occupants IDs.
  @param type The dialog type, represented by the enum type DialogType
+ @param type The dialog name
  @param success A block object to be executed after the dialog is successfully created. This block has no return value and takes one argument: a QBChatDialog.
  @param failure A block object to be executed when the creation of the dialog fails. This block has no return value and takes one argument: a NSError.
  */
 
 - (void)createDialogWithOccupants:(NSArray *)occupants
                        dialogType:(DialogType)type
+                       dialogName:(NSString *)name
                           success:(void(^)(QBChatDialog *))success
                           failure:(void(^)(NSError *))failure;
 
@@ -142,7 +149,7 @@ typedef enum {
  
  @param page The requested page's number.
  @param amount The maximum amount of records to fetch.
-@param queryParams Extra parameters. Can be nil. Parameters should be formatted as QuickBlox documentation indicates.
+ @param queryParams Extra parameters. Can be nil. Parameters should be formatted as QuickBlox documentation indicates.
  @param success A block object to be executed when the request finishes successfully. This block has no return value and takes one argument: a NSArray
  @param failure A block object to be executed when the request fails. This block has no return value and takes one argument: a NSError.
  */
@@ -156,11 +163,11 @@ typedef enum {
  Sends message to a chat
  
  @warning Quickblocks provides no callback for request's success or failure. This is handled by delegates that fire notifications.
-          "groupChatMessageCreated" or "privateChatMessageCreated" notification is fired when the message was 
+          QBGroupChatMessageReceivedNotification or QBPrivateChatMessageReceivedNotification notification is fired when the message was
             successfully sent.
             It sends the QBChatMessage in the userInfo dictionary.
  
-          "groupChatMessageCreationFailed" or "privateChatMessageCreationFailed" notification is fired when the message could not be sent.
+          QBGroupChatMessageCreationFailed or QBPrivateChatMessageCreationFailed notification is fired when the message could not be sent.
             It sends an NSError in the userInfo dictionary.
 
  @param text The message text to send.
@@ -206,6 +213,15 @@ typedef enum {
  @return YES if the user is logged in, NO otherwise.
  */
 - (BOOL)userIsLoggedIn;
+
+
+/**
+ Returns the current logged user
+ 
+ @return QBUUser representing the logged user.
+ */
+- (QBUUser *)currentUser;
+
 
 /**
  Subscribes user for receiving remote notifications.

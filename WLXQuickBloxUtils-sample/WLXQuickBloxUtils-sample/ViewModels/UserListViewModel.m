@@ -42,7 +42,7 @@ NSUInteger const UserListItemsBeforePagination = 5;
                                       queryParams:nil
                                           success:^(NSArray *resources) {
                                               __strong typeof(self) strongSelf = weakSelf;
-                                              [strongSelf.collectionViewModel saveResources:[self mapUsersToViewModels:resources]];
+                                              [strongSelf.collectionViewModel addPage:[self mapUsersToViewModels:resources]];
                                               if(success) {
                                                   success();
                                               }
@@ -60,12 +60,37 @@ NSUInteger const UserListItemsBeforePagination = 5;
     }
 }
 
+
+- (void)createDialogWithUser:(UserViewModel *)userViewModel success:(void(^)(PrivateDialogViewModel *))success failure:(void(^)(NSString *))failure {
+    __weak typeof(self) weakSelf = self;
+    NSArray *occupants = @[@(userViewModel.qbId)];
+    [self.quickbloxUtils createDialogWithOccupants:occupants
+                                        dialogType:DialogTypePrivate
+                                        dialogName:nil
+                                           success:^(QBChatDialog *dialog) {
+                                               __strong typeof(self) strongSelf = weakSelf;
+                                               PrivateDialogViewModel *dialogViewModel = [strongSelf dialogToViewModel:dialog user:userViewModel];
+                                               if(success) {
+                                                   success(dialogViewModel);
+                                               }
+                                           } failure:^(NSError *error) {
+                                               if(failure) {
+                                                   NSString *errorMSG = [NSLocalizedString(@"create_dialog_error", nil) capitalizeFirstWord];
+                                                   failure(errorMSG);
+                                               }
+                                           }];
+}
+
 #pragma mark - Mapping methods
 
 - (NSArray *)mapUsersToViewModels:(NSArray *)users {
     return [users map:^id(QBUUser *user) {
         return [[UserViewModel alloc] initWithQBUUser:user];
     }];
+}
+
+- (PrivateDialogViewModel *)dialogToViewModel:(QBChatDialog *)dialog user:(UserViewModel *)userViewModel{
+    return [[PrivateDialogViewModel alloc] initWithDialog:dialog quickbloxUtils:self.quickbloxUtils userViewModel:userViewModel];
 }
 
 #pragma mark - Collection handling methods

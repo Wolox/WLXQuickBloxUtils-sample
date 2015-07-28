@@ -19,7 +19,7 @@
 - (instancetype)initWithAmountPerPage:(NSUInteger)amountPerPage {
     self = [super init];
     if(self) {
-        _pageNumber = 1;
+        _pageNumber = 0;
         _isLastPage = NO;
         _resources = [NSMutableArray array];
         _amountPerPage = amountPerPage;
@@ -27,17 +27,26 @@
     return self;
 }
 
-- (void)saveResources:(NSArray *)resources {
+- (void)addPage:(NSArray *)resources {
     [self.resources addObjectsFromArray:resources];
+    _pageNumber++;
     if(resources.count < self.amountPerPage) {
         _isLastPage = YES;
     }
 }
 
+- (void)addResource:(id)resource {
+    [self.resources addObject:resource];
+}
+
+- (void)addResource:(id)resource atIndex:(NSUInteger)index {
+    [self.resources insertObject:resource atIndex:index];
+}
+
 - (void)reset {
     [self.resources removeAllObjects];
     _isLastPage = NO;
-    _pageNumber = 1;
+    _pageNumber = 0;
 }
 
 - (id)objectAtIndex:(NSUInteger)index {

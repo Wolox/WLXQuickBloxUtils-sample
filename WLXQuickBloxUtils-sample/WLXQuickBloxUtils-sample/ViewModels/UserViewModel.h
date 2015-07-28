@@ -16,5 +16,6 @@
 - (instancetype)initWithQBUUser:(QBUUser *)user;
 
 - (NSString *)email;
+- (NSUInteger)qbId;
 
 @end

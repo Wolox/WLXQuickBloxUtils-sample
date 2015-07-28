@@ -30,6 +30,8 @@
 		2DFA31FC1B66C8D30064EB94 /* UINavigationController+RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31FB1B66C8D30064EB94 /* UINavigationController+RootViewController.m */; };
 		2DFA31FF1B66CB020064EB94 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31FE1B66CB020064EB94 /* TabBarController.m */; };
 		2DFA32021B66CC4D0064EB94 /* TabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */; };
+		2DFA32101B67D8520064EB94 /* PrivateDialogViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA320F1B67D8520064EB94 /* PrivateDialogViewModel.m */; };
+		2DFA32161B67D8830064EB94 /* MessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32151B67D8830064EB94 /* MessageViewModel.m */; };
 		DC622D4610592A32A176F399 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,10 @@
 		2DFA32001B66CC4D0064EB94 /* TabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewModel.h; sourceTree = "<group>"; };
 		2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewModel.m; sourceTree = "<group>"; };
 		2DFA32031B66D4010064EB94 /* TabBarItemViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarItemViewControllerProtocol.h; path = Protocols/TabBarItemViewControllerProtocol.h; sourceTree = "<group>"; };
+		2DFA320E1B67D8520064EB94 /* PrivateDialogViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateDialogViewModel.h; sourceTree = "<group>"; };
+		2DFA320F1B67D8520064EB94 /* PrivateDialogViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateDialogViewModel.m; sourceTree = "<group>"; };
+		2DFA32141B67D8830064EB94 /* MessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewModel.h; sourceTree = "<group>"; };
+		2DFA32151B67D8830064EB94 /* MessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewModel.m; sourceTree = "<group>"; };
 		302F48B23BEC552C62023089 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +139,10 @@
 				2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */,
 				2DFA32001B66CC4D0064EB94 /* TabBarViewModel.h */,
 				2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */,
+				2DFA320E1B67D8520064EB94 /* PrivateDialogViewModel.h */,
+				2DFA320F1B67D8520064EB94 /* PrivateDialogViewModel.m */,
+				2DFA32141B67D8830064EB94 /* MessageViewModel.h */,
+				2DFA32151B67D8830064EB94 /* MessageViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -438,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFA32101B67D8520064EB94 /* PrivateDialogViewModel.m in Sources */,
 				2DFA31F61B66C0C40064EB94 /* UITableViewController+RegisterNib.m in Sources */,
 				2DFA31F11B66BE9F0064EB94 /* UserTableViewCell.m in Sources */,
 				2DFA31FF1B66CB020064EB94 /* TabBarController.m in Sources */,
@@ -454,6 +465,7 @@
 				2DFA31D61B66964C0064EB94 /* UIView+MakeToast.m in Sources */,
 				2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */,
 				2DFA31DD1B669DEB0064EB94 /* UserListViewModel.m in Sources */,
+				2DFA32161B67D8830064EB94 /* MessageViewModel.m in Sources */,
 				2DFA31E01B669DFB0064EB94 /* UserListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +537,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -562,6 +575,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

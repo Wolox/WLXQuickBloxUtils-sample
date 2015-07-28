@@ -16,7 +16,7 @@
 
 - (instancetype)initWithAmountPerPage:(NSUInteger)amountPerPage;
 
-- (void)saveResources:(NSArray *)resources;
+- (void)addPage:(NSArray *)resources;
 
 - (id)objectAtIndex:(NSUInteger)index;
 
@@ -25,5 +25,9 @@
 - (NSUInteger)count;
 
 - (BOOL)isEndOfPage:(NSUInteger)index;
+
+- (void)addResource:(id)resource;
+
+- (void)addResource:(id)resource atIndex:(NSUInteger)index;
 
 @end

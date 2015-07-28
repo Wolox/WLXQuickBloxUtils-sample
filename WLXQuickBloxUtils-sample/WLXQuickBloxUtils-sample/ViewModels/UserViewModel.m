@@ -30,4 +30,8 @@
     return self.user.login;
 }
 
+- (NSUInteger)qbId {
+    return self.user.ID;
+}
+
 @end
