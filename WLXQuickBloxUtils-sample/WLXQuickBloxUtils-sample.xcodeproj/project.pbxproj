@@ -24,13 +24,14 @@
 		2DFA31DD1B669DEB0064EB94 /* UserListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31DC1B669DEB0064EB94 /* UserListViewModel.m */; };
 		2DFA31E01B669DFB0064EB94 /* UserListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31DF1B669DFB0064EB94 /* UserListTableViewController.m */; };
 		2DFA31E31B66A0500064EB94 /* CollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */; };
+		2DFA31E91B66B5830064EB94 /* ConversationListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31E81B66B5830064EB94 /* ConversationListViewModel.m */; };
+		2DFA31EC1B66B6700064EB94 /* PrivateDialogViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31EB1B66B6700064EB94 /* PrivateDialogViewModel.m */; };
 		2DFA31F11B66BE9F0064EB94 /* UserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31F01B66BE9F0064EB94 /* UserTableViewCell.m */; };
 		2DFA31F31B66BEB80064EB94 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA31F21B66BEB80064EB94 /* UserTableViewCell.xib */; };
 		2DFA31F61B66C0C40064EB94 /* UITableViewController+RegisterNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31F51B66C0C40064EB94 /* UITableViewController+RegisterNib.m */; };
 		2DFA31FC1B66C8D30064EB94 /* UINavigationController+RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31FB1B66C8D30064EB94 /* UINavigationController+RootViewController.m */; };
 		2DFA31FF1B66CB020064EB94 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA31FE1B66CB020064EB94 /* TabBarController.m */; };
 		2DFA32021B66CC4D0064EB94 /* TabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */; };
-		2DFA32101B67D8520064EB94 /* PrivateDialogViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA320F1B67D8520064EB94 /* PrivateDialogViewModel.m */; };
 		2DFA32131B67D8640064EB94 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32121B67D8640064EB94 /* ConversationViewController.m */; };
 		2DFA32161B67D8830064EB94 /* MessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32151B67D8830064EB94 /* MessageViewModel.m */; };
 		2DFA321C1B6821830064EB94 /* BackButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA321B1B6821830064EB94 /* BackButtonItem.m */; };
@@ -81,6 +82,10 @@
 		2DFA31DF1B669DFB0064EB94 /* UserListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListTableViewController.m; sourceTree = "<group>"; };
 		2DFA31E11B66A0500064EB94 /* CollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewModel.h; sourceTree = "<group>"; };
 		2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewModel.m; sourceTree = "<group>"; };
+		2DFA31E71B66B5830064EB94 /* ConversationListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListViewModel.h; sourceTree = "<group>"; };
+		2DFA31E81B66B5830064EB94 /* ConversationListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationListViewModel.m; sourceTree = "<group>"; };
+		2DFA31EA1B66B6700064EB94 /* PrivateDialogViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateDialogViewModel.h; sourceTree = "<group>"; };
+		2DFA31EB1B66B6700064EB94 /* PrivateDialogViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateDialogViewModel.m; sourceTree = "<group>"; };
 		2DFA31EF1B66BE9F0064EB94 /* UserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserTableViewCell.h; path = Cells/UserTableViewCell/UserTableViewCell.h; sourceTree = "<group>"; };
 		2DFA31F01B66BE9F0064EB94 /* UserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserTableViewCell.m; path = Cells/UserTableViewCell/UserTableViewCell.m; sourceTree = "<group>"; };
 		2DFA31F21B66BEB80064EB94 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
@@ -93,8 +98,6 @@
 		2DFA32001B66CC4D0064EB94 /* TabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewModel.h; sourceTree = "<group>"; };
 		2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewModel.m; sourceTree = "<group>"; };
 		2DFA32031B66D4010064EB94 /* TabBarItemViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarItemViewControllerProtocol.h; path = Protocols/TabBarItemViewControllerProtocol.h; sourceTree = "<group>"; };
-		2DFA320E1B67D8520064EB94 /* PrivateDialogViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateDialogViewModel.h; sourceTree = "<group>"; };
-		2DFA320F1B67D8520064EB94 /* PrivateDialogViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateDialogViewModel.m; sourceTree = "<group>"; };
 		2DFA32111B67D8640064EB94 /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
 		2DFA32121B67D8640064EB94 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
 		2DFA32141B67D8830064EB94 /* MessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewModel.h; sourceTree = "<group>"; };
@@ -144,10 +147,12 @@
 				2DFA31DC1B669DEB0064EB94 /* UserListViewModel.m */,
 				2DFA31E11B66A0500064EB94 /* CollectionViewModel.h */,
 				2DFA31E21B66A0500064EB94 /* CollectionViewModel.m */,
+				2DFA31E71B66B5830064EB94 /* ConversationListViewModel.h */,
+				2DFA31E81B66B5830064EB94 /* ConversationListViewModel.m */,
+				2DFA31EA1B66B6700064EB94 /* PrivateDialogViewModel.h */,
+				2DFA31EB1B66B6700064EB94 /* PrivateDialogViewModel.m */,
 				2DFA32001B66CC4D0064EB94 /* TabBarViewModel.h */,
 				2DFA32011B66CC4D0064EB94 /* TabBarViewModel.m */,
-				2DFA320E1B67D8520064EB94 /* PrivateDialogViewModel.h */,
-				2DFA320F1B67D8520064EB94 /* PrivateDialogViewModel.m */,
 				2DFA32141B67D8830064EB94 /* MessageViewModel.h */,
 				2DFA32151B67D8830064EB94 /* MessageViewModel.m */,
 			);
@@ -477,7 +482,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DFA32101B67D8520064EB94 /* PrivateDialogViewModel.m in Sources */,
 				2DFA31F61B66C0C40064EB94 /* UITableViewController+RegisterNib.m in Sources */,
 				2DFA31F11B66BE9F0064EB94 /* UserTableViewCell.m in Sources */,
 				2DFA31FF1B66CB020064EB94 /* TabBarController.m in Sources */,
@@ -494,7 +498,9 @@
 				2DFA32021B66CC4D0064EB94 /* TabBarViewModel.m in Sources */,
 				2DAAC1C01B5036440032584C /* main.m in Sources */,
 				2DFA31D61B66964C0064EB94 /* UIView+MakeToast.m in Sources */,
+				2DFA31E91B66B5830064EB94 /* ConversationListViewModel.m in Sources */,
 				2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */,
+				2DFA31EC1B66B6700064EB94 /* PrivateDialogViewModel.m in Sources */,
 				2DFA31DD1B669DEB0064EB94 /* UserListViewModel.m in Sources */,
 				2DFA32161B67D8830064EB94 /* MessageViewModel.m in Sources */,
 				2DFA31E01B669DFB0064EB94 /* UserListTableViewController.m in Sources */,

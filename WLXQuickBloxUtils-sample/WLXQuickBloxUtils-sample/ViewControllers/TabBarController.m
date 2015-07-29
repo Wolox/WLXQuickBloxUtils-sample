@@ -26,7 +26,7 @@
 
 - (void)initTabBarItems {
     UITabBarItem *item = [self.tabBar.items objectAtIndex:UserListTabBarIndex];
-    item.title = [self.viewModel titleAtIndex:UserListTabBarIndex];
+    item.title = [self.viewModel tabBarItemTitleAtIndex:UserListTabBarIndex];
 }
 
 - (void)initViewControllers {
