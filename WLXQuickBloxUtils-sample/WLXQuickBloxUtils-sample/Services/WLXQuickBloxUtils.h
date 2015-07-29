@@ -160,6 +160,21 @@ typedef enum {
                          failure:(void(^)(NSError *))failure;
 
 /**
+ Fetches users with ids
+ 
+ @param userIds The user's ids to fetch.
+ @param page The requested page's number.
+ @param amount The maximum amount of records to fetch.
+ @param success A block object to be executed when the request finishes successfully. This block has no return value and takes one argument: a NSArray
+ @param failure A block object to be executed when the request fails. This block has no return value and takes one argument: a NSError.
+ */
+- (void)usersWithIds:(NSArray *)userIds
+                page:(NSUInteger)page
+              amount:(NSUInteger)amount
+             success:(void(^)(NSArray *))success
+             failure:(void(^)(NSError *))failure;
+
+/**
  Sends message to a chat
  
  @warning Quickblocks provides no callback for request's success or failure. This is handled by delegates that fire notifications.

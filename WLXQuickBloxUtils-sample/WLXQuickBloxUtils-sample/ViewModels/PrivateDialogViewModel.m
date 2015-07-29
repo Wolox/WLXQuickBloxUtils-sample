@@ -133,14 +133,6 @@ NSString *const PrivateMessageNotSentNoticifation = @"privateMessageReceived";
 
 #pragma mark - Private methods
 
-// This method works assuming the dialog is created with the name "userLogin1-userLogin2"
-- (NSString *)getUserName {
-    NSArray *names = [self.dialog.name split:@"-"];
-    return [names detect:^BOOL(NSString *name) {
-        return ![name isEqualToString:[QBSession currentSession].currentUser.login];
-    }];
-}
-
 - (NSArray *)mapMessagesToViewModels:(NSArray *)messages {
     return [messages map:^id(QBChatMessage *message) {
         return [[MessageViewModel alloc] initWithQBChatMessage:message];

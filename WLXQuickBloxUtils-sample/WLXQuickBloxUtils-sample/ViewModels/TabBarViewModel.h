@@ -11,14 +11,15 @@
 #import "UserListViewModel.h"
 
 typedef enum {
-    UserListTabBarIndex
+    UserListTabBarIndex,
+    ConversationListTabBarIndex
 }TabBarIndex;
 
 @interface TabBarViewModel : NSObject
 
 - (instancetype)initWithQuickbloxUtils:(WLXQuickBloxUtils *)quickbloxUtils;
 
-- (NSString *)titleAtIndex:(TabBarIndex)index;
 - (id)tabBarItemViewModelAtIndex:(NSUInteger)index;
+- (NSString *)tabBarItemTitleAtIndex:(NSUInteger)index;
 
 @end
