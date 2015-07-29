@@ -10,10 +10,16 @@
 #import "UserTableViewCell.h"
 #import "UITableViewController+RegisterNib.h"
 #import "UIView+MakeToast.h"
+#import "UserTableViewCellDelegate.h"
+#import "ConversationViewController.h"
+#import "BackButtonItem.h"
 
 NSString *const UserCellId = @"UserTableViewCell";
+NSString *const StartConversationSegueId = @"startConversationSegue";
 
-@interface UserListTableViewController ()
+@interface UserListTableViewController ()<UserTableViewCellDelegate>
+
+@property (strong, nonatomic) PrivateDialogViewModel *conversationViewModel;
 
 @end
 
@@ -48,7 +54,7 @@ NSString *const UserCellId = @"UserTableViewCell";
     
     UserViewModel *userViewModel = [self.viewModel objectAtIndex:indexPath.row];
     
-    [cell populateWithViewModel:userViewModel];
+    [cell populateWithViewModel:userViewModel delegate:self indexPath:indexPath];
     
     return cell;
 }
@@ -67,6 +73,19 @@ NSString *const UserCellId = @"UserTableViewCell";
                                      [strongSelf.view makeToastWithText:errorMSG];
                                  });
                              }];
+}
+
+#pragma mark - <UserTableViewCellDelegate>
+
+- (void)didPressTalk:(UIButton *)sender {
+    UserViewModel *targetUserViewModel = [self.viewModel objectAtIndex:sender.tag];
+    [self.viewModel createDialogWithUser:targetUserViewModel
+                                 success:^(PrivateDialogViewModel *dialogViewModel) {
+                                     self.conversationViewModel = dialogViewModel;
+                                     [self performSegueWithIdentifier:StartConversationSegueId sender:self];
+                                 } failure:^(NSString *errorMSG) {
+                                     [self.view makeToastWithText:errorMSG];
+                                 }];
 }
 
 #pragma mark - Request methods
@@ -88,6 +107,17 @@ NSString *const UserCellId = @"UserTableViewCell";
     }];
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSString *segueIdentifier = [segue identifier];
+    if([segueIdentifier isEqualToString:StartConversationSegueId]) {
+        ConversationViewController *viewController = [segue destinationViewController];
+        viewController.viewModel = self.conversationViewModel;
+        self.conversationViewModel = nil;
+    }
+}
+
 - (void)pullToRefresh {
     [self.viewModel resetData];
     [self performInitialRequest];
@@ -102,6 +132,7 @@ NSString *const UserCellId = @"UserTableViewCell";
 
 - (void)initUI {
     self.navigationItem.title = self.viewModel.title;
+    self.navigationItem.backBarButtonItem = [BackButtonItem new];
 }
 
 @end

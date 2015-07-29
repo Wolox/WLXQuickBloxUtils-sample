@@ -13,6 +13,11 @@
 #define BLOCKED_PRIVACY_LIST @"public"
 #define kPushTypeKey @"type"
 
+NSString *const QBGroupChatMessageReceivedNotification = @"groupChatMessageReceived";
+NSString *const QBGroupChatMessageCreationFailedNotification = @"groupChatMessageCreationFailed";
+NSString *const QBPrivateChatMessageReceivedNotification = @"privateChatMessageReceived";
+NSString *const QBPrivateChatMessageCreationFailedNotification = @"privateChatMessageCreationFailed";
+
 @interface WLXQuickBloxUtils ()
 
 @property (strong, nonatomic) QBPrivacyList *blockedPrivacyList;
@@ -107,13 +112,17 @@
     return [QBChat instance].currentUser != nil;
 }
 
+- (QBUUser *)currentUser {
+    return [QBSession currentSession].currentUser;
+}
+
 #pragma mark - Dialog methods
 
-- (void)createDialogWithOccupants:(NSArray *)occupants dialogType:(DialogType)type success:(void(^)(QBChatDialog *))success failure:(void(^)(NSError *))failure {
+- (void)createDialogWithOccupants:(NSArray *)occupants dialogType:(DialogType)type dialogName:(NSString *)name success:(void(^)(QBChatDialog *))success failure:(void(^)(NSError *))failure {
     QBChatDialog *chatDialog = [QBChatDialog new];
     chatDialog.type = [self.dialogTypeMapping[@(type)] intValue];
     chatDialog.occupantIDs = occupants;
-    chatDialog.name = occupants.join;
+    chatDialog.name = name;
     
     [QBRequest createDialog:chatDialog successBlock:^(QBResponse *response, QBChatDialog *createdDialog) {
         if(success) {
@@ -167,7 +176,6 @@
 - (void)retrieveAllUsersFromPage:(NSUInteger)page amount:(NSUInteger)amount queryParams:(NSDictionary *)parameters success:(void(^)(NSArray *))success failure:(void(^)(NSError *))failure {
     QBGeneralResponsePage *resPage = [QBGeneralResponsePage responsePageWithCurrentPage:page perPage:amount];
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"id[ne]":@([QBSession currentSession].currentUser.ID)}];
-//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
     if(parameters) {
         [params addEntriesFromDictionary:parameters];
     }
@@ -255,13 +263,13 @@
 #pragma mark Group messages delegate methods
 
 - (void)chatRoomDidReceiveMessage:(QBChatMessage *)message fromRoomJID:(NSString *)roomJID {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"groupChatMessageCreated"
+    [[NSNotificationCenter defaultCenter] postNotificationName:QBGroupChatMessageReceivedNotification
                                                         object:nil
                                                       userInfo:@{@"message":message}];
 }
 
 - (void)chatDidNotSendMessage:(QBChatMessage *)message toRoomJid:(NSString *)roomJid error:(NSError *)error {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"groupChatMessageCreationFailed"
+    [[NSNotificationCenter defaultCenter] postNotificationName:QBGroupChatMessageCreationFailedNotification
                                                         object:nil
                                                       userInfo:@{@"error":error}];
 }
@@ -269,13 +277,13 @@
 #pragma mark Private messages delegate methods
 
 - (void)chatDidReceiveMessage:(QBChatMessage *)message {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"privateChatMessageCreated"
+    [[NSNotificationCenter defaultCenter] postNotificationName:QBPrivateChatMessageReceivedNotification
                                                         object:nil
                                                       userInfo:@{@"message":message}];
 }
 
 - (void)chatDidNotSendMessage:(QBChatMessage *)message error:(NSError *)error {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"privateChatMessageCreationFailed"
+    [[NSNotificationCenter defaultCenter] postNotificationName:QBPrivateChatMessageCreationFailedNotification
                                                         object:nil
                                                       userInfo:@{@"error":error}];
 }
