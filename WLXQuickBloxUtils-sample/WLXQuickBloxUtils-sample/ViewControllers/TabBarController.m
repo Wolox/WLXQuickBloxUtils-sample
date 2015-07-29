@@ -18,21 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initTabBarItems];
-    [self initViewControllers];
+    [self initTabBarItemsAndViewControllers];
 }
 
 #pragma mark Initializers
 
-- (void)initTabBarItems {
-    UITabBarItem *item = [self.tabBar.items objectAtIndex:UserListTabBarIndex];
-    item.title = [self.viewModel titleAtIndex:UserListTabBarIndex];
-}
-
-- (void)initViewControllers {
+- (void)initTabBarItemsAndViewControllers {
     [self.viewControllers eachWithIndex:^(UINavigationController *navigationController, NSUInteger index) {
         id<TabBarItemViewControllerProtocol> viewController = [navigationController rootViewController];
         [viewController setTabBarItemViewModel:[self.viewModel tabBarItemViewModelAtIndex:index]];
+        
+        UITabBarItem *item = [self.tabBar.items objectAtIndex:index];
+        item.title = [self.viewModel tabBarItemTitleAtIndex:index];
     }];
 }
 

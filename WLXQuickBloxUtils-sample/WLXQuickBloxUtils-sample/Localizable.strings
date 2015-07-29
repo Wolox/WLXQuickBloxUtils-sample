@@ -16,7 +16,7 @@
 "signup_button_title" = "sign up";
 "user_fetching_error" = "hubo un error. Intente nuevamente más tarde.";
 "user_list_title" = "contactos";
-"conversation_list_title" = "conversationes";
+"conversation_list_title" = "conversaciones";
 "conversation_fetching_error" = "hubo un error. Intente nuevamente más tarde.";
 "talk_button_title" = "Conversar";
 "message_fetching_error" = "hubo un error. Intente nuevamente más tarde.";

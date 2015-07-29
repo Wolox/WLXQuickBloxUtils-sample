@@ -8,13 +8,16 @@
 
 #import "TabBarViewModel.h"
 #import "NSString+CapitalizeFirstWord.h"
+#import "ConversationListViewModel.h"
 
 @interface TabBarViewModel ()
 
 @property (strong, nonatomic) WLXQuickBloxUtils *quickbloxUtils;
 @property (strong, nonatomic) NSDictionary *tabBarItemViewModels;
+@property (strong, nonatomic) NSDictionary *tabBarItemTitles;
 
 @property (strong, nonatomic) UserListViewModel *userListViewModel;
+@property (strong, nonatomic) ConversationListViewModel *conversationListViewModel;
 
 @end
 
@@ -27,30 +30,31 @@
     if(self) {
         _quickbloxUtils = quickbloxUtils;
         _userListViewModel = [[UserListViewModel alloc] initWithQuickbloxUtils:_quickbloxUtils];
+        _conversationListViewModel = [[ConversationListViewModel alloc] initWithQuickbloxUtils:_quickbloxUtils];
         [self initTabBarItemViewModels];
+        [self initTabBarItemTitles];
     }
     return self;
 }
 
 - (void)initTabBarItemViewModels {
-    self.tabBarItemViewModels = @{@(UserListTabBarIndex): self.userListViewModel};
+    self.tabBarItemViewModels = @{@(UserListTabBarIndex): self.userListViewModel,
+                                  @(ConversationListTabBarIndex): self.conversationListViewModel};
+}
+
+- (void)initTabBarItemTitles {
+    self.tabBarItemTitles = @{@(UserListTabBarIndex): [NSLocalizedString(@"user_list_title", nil) capitalizeFirstWord],
+                              @(ConversationListTabBarIndex): [NSLocalizedString(@"conversation_list_title", nil) capitalizeFirstWord]};
 }
 
 #pragma mark - Tab Bar Info
 
-- (NSString *)titleAtIndex:(TabBarIndex)index {
-    NSString *title;
-    switch(index) {
-        case UserListTabBarIndex:
-            title = [NSLocalizedString(@"user_list_tab_bar_title", nil) capitalizeFirstWord];
-        default:
-            return nil;
-    }
-    return title;
-}
-
 - (id)tabBarItemViewModelAtIndex:(NSUInteger)index {
     return self.tabBarItemViewModels[@(index)];
+}
+
+- (NSString *)tabBarItemTitleAtIndex:(NSUInteger)index {
+    return self.tabBarItemTitles[@(index)];
 }
 
 @end
