@@ -19,7 +19,7 @@ extern NSString *const PrivateMessageNotSentNoticifation;
 @property (readonly, nonatomic) NSString *title;
 @property (readonly, nonatomic) NSUInteger senderId;
 
-- (instancetype)initWithDialog:(QBChatDialog *)dialog quickbloxUtils:(WLXQuickBloxUtils *)quickbloxUtils userViewModel:(UserViewModel *)userViewModel ;
+- (instancetype)initWithDialog:(QBChatDialog *)dialog quickbloxUtils:(WLXQuickBloxUtils *)quickbloxUtils userViewModel:(UserViewModel *)userViewModel;
 
 - (NSString *)lastMessage;
 - (NSString *)lastMessageDate;

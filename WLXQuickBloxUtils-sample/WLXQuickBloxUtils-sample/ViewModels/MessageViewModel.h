@@ -22,6 +22,5 @@
 
 - (id<JSQMessageData>)jsqMessage;
 - (NSAttributedString *)dateAttributedString;
-- (NSAttributedString *)attributedTitle:(NSString *)title;
 
 @end

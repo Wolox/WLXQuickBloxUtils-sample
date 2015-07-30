@@ -9,6 +9,7 @@
 #import "TabBarViewModel.h"
 #import "NSString+CapitalizeFirstWord.h"
 #import "ConversationListViewModel.h"
+#import "UserListViewModel.h"
 
 @interface TabBarViewModel ()
 
