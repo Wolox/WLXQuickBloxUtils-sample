@@ -24,5 +24,6 @@
 - (UserViewModel *)objectAtIndex:(NSUInteger)index;
 - (void)resetData;
 - (NSUInteger)count;
+- (void)addUser:(UserViewModel *)user;
 
 @end

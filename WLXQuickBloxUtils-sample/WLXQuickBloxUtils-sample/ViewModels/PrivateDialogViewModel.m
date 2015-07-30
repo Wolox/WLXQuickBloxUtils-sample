@@ -15,6 +15,10 @@
 NSUInteger static MessagesAmountPerPage = 25;
 NSString *const PrivateMessageReceivedNotification = @"privateMessageReceived";
 NSString *const PrivateMessageNotSentNoticifation = @"privateMessageReceived";
+NSString *const kPushAps = @"aps";
+NSString *const kPushAlert = @"alert";
+NSString *const kPushSound = @"sound";
+NSString *const kPushSoundValue = @"default";
 
 @interface PrivateDialogViewModel ()
 
@@ -58,9 +62,14 @@ NSString *const PrivateMessageNotSentNoticifation = @"privateMessageReceived";
 #pragma mark - Request methods
 
 - (void)createMessage:(NSString *)message sentAt:(NSDate *)dateSent {
+    __weak typeof(self) weakSelf = self;
     [self.quickbloxUtils sendMessageToDialog:self.dialog
                                         text:message
-                               saveToHistory:YES];
+                               saveToHistory:YES
+                                     success:^{
+                                         __strong typeof(self) strongSelf = weakSelf;
+                                         [strongSelf sendPush];
+                                     } failure:nil];
     [self addMessage:message receivedAt:dateSent];
 }
 
@@ -137,6 +146,17 @@ NSString *const PrivateMessageNotSentNoticifation = @"privateMessageReceived";
     return [messages map:^id(QBChatMessage *message) {
         return [[MessageViewModel alloc] initWithQBChatMessage:message];
     }];
+}
+
+- (void)sendPush {
+    NSString *message = [NSString stringWithFormat:NSLocalizedString(@"@% sent you a message", nil), self.userViewModel.email];
+    NSDictionary *dict = @{kPushAps:
+                               @{kPushAlert:message,
+                                 kPushSound:kPushSoundValue}};
+    [self.quickbloxUtils sendPushWithDictionary:dict
+                                     toUsersWithQbIds:@[@(self.userViewModel.qbId)]
+                                              success:nil
+                                              failure:nil];
 }
 
 @end

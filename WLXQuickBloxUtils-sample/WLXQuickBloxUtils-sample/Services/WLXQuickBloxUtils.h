@@ -177,9 +177,8 @@ typedef enum {
 /**
  Sends message to a chat
  
- @warning Quickblocks provides no callback for request's success or failure. This is handled by delegates that fire notifications.
-          QBGroupChatMessageReceivedNotification or QBPrivateChatMessageReceivedNotification notification is fired when the message was
-            successfully sent.
+ @warning QBGroupChatMessageReceivedNotification or QBPrivateChatMessageReceivedNotification notification is fired when the message was
+            successfully received.
             It sends the QBChatMessage in the userInfo dictionary.
  
           QBGroupChatMessageCreationFailed or QBPrivateChatMessageCreationFailed notification is fired when the message could not be sent.
@@ -187,10 +186,14 @@ typedef enum {
 
  @param text The message text to send.
  @param saveToHistory A boolean indicating if message should be saved in the dialog's history.
+ @param success A block object to be executed when the message was successfully sent. It has no return value.
+ @param failure A block object to be executed when the request fails. This block has no return value and takes one argument: a NSError.
 */
 - (void)sendMessageToDialog:(QBChatDialog *)dialog
                        text:(NSString *)text
-              saveToHistory:(BOOL)saveToHistory;
+              saveToHistory:(BOOL)saveToHistory
+                    success:(void(^)())success
+                    failure:(void(^)(NSError *))failure;
 
 /**
  Blocks a user with given quickblox id.
@@ -259,22 +262,18 @@ typedef enum {
 - (void)unsubscribeForNotifications:(void(^)())success failure:(void(^)(NSError *))failure;
 
 /**
- Sends push notification to users with qbIds
+ Sends push notification to users with qbIds.
  
- @param alertText Text to appear in alert.
- @param message Message sent to receiver.
- @param dialogId The message's dialog ID
- @param qbIds quickblox ids of the users to receive the push.
+ @param params NSDictionary in the format in which you want to send the push.
+ @param qbIds Quickblox ids of the users to receive the push.
  @param success A block object to be executed when the push is successfully sent. This block has no return value and takes no argument.
  @param failure A block object to be executed when the push fails. This block has no return value and takes one argument: a NSError.
  
  */
-- (void)sendPushWithAlertText:(NSString *)alertText
-                  messageText:(NSString *)message
-                     dialogId:(NSString *)dialogId
-                        qbIds:(NSArray *)qbIds
-                      success:(void(^)())success
-                      failure:(void(^)(NSError *))failure;
+- (void)sendPushWithDictionary:(NSDictionary *)params
+              toUsersWithQbIds:(NSArray *)qbIds
+                       success:(void(^)())success
+                       failure:(void(^)(NSError *))failure;
 
 /**
  Removes occupants from dialog

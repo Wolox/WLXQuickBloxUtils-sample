@@ -107,4 +107,8 @@ NSUInteger const UserListItemsBeforePagination = 5;
     return self.collectionViewModel.count;
 }
 
+- (void)addUser:(UserViewModel *)user {
+    [self.collectionViewModel addResource:user];
+}
+
 @end

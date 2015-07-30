@@ -128,4 +128,8 @@ NSUInteger const ConversationListItemsBeforePagination = 5;
     return self.collectionViewModel.count;
 }
 
+- (void)addDialog:(PrivateDialogViewModel *)dialog {
+    [self.collectionViewModel addResource:dialog];
+}
+
 @end

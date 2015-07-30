@@ -1,25 +1,40 @@
 PODS:
   - DateTools (1.6.1)
+  - Expecta (1.0.2)
   - JSQMessagesViewController (7.1.0):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - MBFaker (0.1.2)
   - ObjectiveSugar (1.1.0)
+  - OCHamcrest (4.1.1)
+  - OCMockito (1.4.0):
+    - OCHamcrest (~> 4.0)
   - QuickBlox (2.3.0.1)
+  - Specta (0.2.1)
   - Toast (2.4)
 
 DEPENDENCIES:
   - DateTools
+  - Expecta (~> 1.0.0)
   - JSQMessagesViewController
+  - MBFaker (~> 0.1.2)
   - ObjectiveSugar (~> 1.1.0)
+  - OCMockito (~> 1.4.0)
   - QuickBlox
+  - Specta (~> 0.2.1)
   - Toast (~> 2.4)
 
 SPEC CHECKSUMS:
   DateTools: 9bcc89e4f2f9004d8a7a2bd1b49269cf78968e65
+  Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
   JSQMessagesViewController: ca11f86fa68ca70835f05e169df9244147c1dc40
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  MBFaker: 856baf3a7153a474506114b1694c57b3bbeafbda
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
+  OCHamcrest: 6f03ffa81d12feab872638490a44ab0a6d3aca10
+  OCMockito: 4981140c9a9ec06c31af40f636e3c0f25f27e6b2
   QuickBlox: 0c62fa9b6d9d5092b0f0f31b90eabeb7f854ceb5
+  Specta: 15a276a6343867b426d5ed135d5aa4d04123a573
   Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
 
 COCOAPODS: 0.37.2
