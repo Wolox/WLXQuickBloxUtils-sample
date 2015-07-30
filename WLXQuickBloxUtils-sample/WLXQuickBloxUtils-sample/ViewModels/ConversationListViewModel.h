@@ -23,5 +23,6 @@
 - (PrivateDialogViewModel *)objectAtIndex:(NSUInteger)index;
 - (void)resetData;
 - (NSUInteger)count;
+- (void)addDialog:(PrivateDialogViewModel *)dialog;
 
 @end

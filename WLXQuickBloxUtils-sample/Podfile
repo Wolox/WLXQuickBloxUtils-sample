@@ -7,3 +7,8 @@ pod 'JSQMessagesViewController'
 pod 'QuickBlox'
 pod 'DateTools'
 pod 'Toast', '~> 2.4'
+
+pod 'MBFaker',     '~> 0.1.2'
+pod 'Specta',      '~> 0.2.1'
+pod 'Expecta',     '~> 1.0.0'
+pod 'OCMockito',   '~> 1.4.0'

@@ -57,11 +57,4 @@
     return [[JSQMessagesTimestampFormatter sharedFormatter] attributedTimestampForDate:[self date]];
 }
 
-- (NSAttributedString *)attributedTitle:(NSString *)title {
-    if(!title) {
-        return nil;
-    }
-    return [[NSAttributedString alloc] initWithString:title];
-}
-
 @end

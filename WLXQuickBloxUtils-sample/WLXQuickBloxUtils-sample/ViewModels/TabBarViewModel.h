@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "WLXQuickBloxUtils.h"
-#import "UserListViewModel.h"
 
 typedef enum {
     UserListTabBarIndex,

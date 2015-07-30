@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D63A76F1B69672700D7C297 /* UserViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63A76E1B69672700D7C297 /* UserViewModelSpec.m */; };
+		2D63A7711B6973DB00D7C297 /* LoginViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63A7701B6973DB00D7C297 /* LoginViewModelSpec.m */; };
+		2D63A7731B697C2500D7C297 /* CollectionViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63A7721B697C2500D7C297 /* CollectionViewModelSpec.m */; };
+		2D63A7751B6A5EA300D7C297 /* ConversationListViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63A7741B6A5EA300D7C297 /* ConversationListViewModelSpec.m */; };
+		2D63A7771B6A5F6A00D7C297 /* PrivateDialogViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63A7761B6A5F6900D7C297 /* PrivateDialogViewModelSpec.m */; };
+		2D63A7791B6A642800D7C297 /* MessageViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63A7781B6A642800D7C297 /* MessageViewModelSpec.m */; };
+		2D63A77B1B6A702200D7C297 /* TabBarViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63A77A1B6A702200D7C297 /* TabBarViewModelSpec.m */; };
+		2D63A77D1B6A7D7300D7C297 /* UserListViewModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D63A77C1B6A7D7300D7C297 /* UserListViewModelSpec.m */; };
 		2D8C102A1B5072C1000DAE2C /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C10271B5072C1000DAE2C /* LoginViewModel.m */; };
 		2D8C102B1B5072C1000DAE2C /* UserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C10291B5072C1000DAE2C /* UserViewModel.m */; };
 		2D8C102F1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C102E1B5073D3000DAE2C /* NSString+CapitalizeFirstWord.m */; };
 		2DAAC1C01B5036440032584C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1BF1B5036440032584C /* main.m */; };
 		2DAAC1CB1B5036440032584C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1CA1B5036440032584C /* Images.xcassets */; };
 		2DAAC1CE1B5036440032584C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1CC1B5036440032584C /* LaunchScreen.xib */; };
-		2DAAC1DA1B5036440032584C /* WLXQuickBloxUtils_sampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1D91B5036440032584C /* WLXQuickBloxUtils_sampleTests.m */; };
 		2DAAC1F51B5038230032584C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1EC1B5038230032584C /* AppDelegate.m */; };
 		2DAAC1F61B5038230032584C /* WLXQuickBloxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAAC1EF1B5038230032584C /* WLXQuickBloxUtils.m */; };
 		2DAAC1F71B5038230032584C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAAC1F11B5038230032584C /* Main.storyboard */; };
@@ -38,6 +45,7 @@
 		2DFA32131B67D8640064EB94 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32121B67D8640064EB94 /* ConversationViewController.m */; };
 		2DFA32161B67D8830064EB94 /* MessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA32151B67D8830064EB94 /* MessageViewModel.m */; };
 		2DFA321C1B6821830064EB94 /* BackButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA321B1B6821830064EB94 /* BackButtonItem.m */; };
+		A3FC1AE2979D8C8F79D28E24 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
 		DC622D4610592A32A176F399 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302F48B23BEC552C62023089 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +61,15 @@
 
 /* Begin PBXFileReference section */
 		0049314DB306F0B534939661 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2D63A76A1B69664300D7C297 /* SpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		2D63A76E1B69672700D7C297 /* UserViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserViewModelSpec.m; path = ViewModelSpecs/UserViewModelSpec.m; sourceTree = "<group>"; };
+		2D63A7701B6973DB00D7C297 /* LoginViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewModelSpec.m; path = ViewModelSpecs/LoginViewModelSpec.m; sourceTree = "<group>"; };
+		2D63A7721B697C2500D7C297 /* CollectionViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewModelSpec.m; path = ViewModelSpecs/CollectionViewModelSpec.m; sourceTree = "<group>"; };
+		2D63A7741B6A5EA300D7C297 /* ConversationListViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConversationListViewModelSpec.m; path = ViewModelSpecs/ConversationListViewModelSpec.m; sourceTree = "<group>"; };
+		2D63A7761B6A5F6900D7C297 /* PrivateDialogViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrivateDialogViewModelSpec.m; path = ViewModelSpecs/PrivateDialogViewModelSpec.m; sourceTree = "<group>"; };
+		2D63A7781B6A642800D7C297 /* MessageViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageViewModelSpec.m; path = ViewModelSpecs/MessageViewModelSpec.m; sourceTree = "<group>"; };
+		2D63A77A1B6A702200D7C297 /* TabBarViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewModelSpec.m; path = ViewModelSpecs/TabBarViewModelSpec.m; sourceTree = "<group>"; };
+		2D63A77C1B6A7D7300D7C297 /* UserListViewModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserListViewModelSpec.m; path = ViewModelSpecs/UserListViewModelSpec.m; sourceTree = "<group>"; };
 		2D8C10261B5072C1000DAE2C /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		2D8C10271B5072C1000DAE2C /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		2D8C10281B5072C1000DAE2C /* UserViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewModel.h; sourceTree = "<group>"; };
@@ -66,7 +83,6 @@
 		2DAAC1CD1B5036440032584C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2DAAC1D31B5036440032584C /* WLXQuickBloxUtils-sampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WLXQuickBloxUtils-sampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAAC1D81B5036440032584C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DAAC1D91B5036440032584C /* WLXQuickBloxUtils_sampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLXQuickBloxUtils_sampleTests.m; sourceTree = "<group>"; };
 		2DAAC1EB1B5038230032584C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DAAC1EC1B5038230032584C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2DAAC1EE1B5038230032584C /* WLXQuickBloxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLXQuickBloxUtils.h; sourceTree = "<group>"; };
@@ -115,6 +131,9 @@
 		2DFA321B1B6821830064EB94 /* BackButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackButtonItem.m; path = "WLXQuickBloxUtils-sample/UIKit Extensions/BackButtonItem.m"; sourceTree = SOURCE_ROOT; };
 		302F48B23BEC552C62023089 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A2CE63C10FFEF274628FB5F3 /* Pods-WLXQuickBloxUtils-sampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLXQuickBloxUtils-sampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WLXQuickBloxUtils-sampleTests/Pods-WLXQuickBloxUtils-sampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		AFF17BECBDA329AF23848799 /* Pods-WLXQuickBloxUtils-sampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLXQuickBloxUtils-sampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WLXQuickBloxUtils-sampleTests/Pods-WLXQuickBloxUtils-sampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1709936AEDD1DBEC819E60C /* libPods-WLXQuickBloxUtils-sampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WLXQuickBloxUtils-sampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3FC1AE2979D8C8F79D28E24 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +160,24 @@
 			isa = PBXGroup;
 			children = (
 				302F48B23BEC552C62023089 /* libPods.a */,
+				E1709936AEDD1DBEC819E60C /* libPods-WLXQuickBloxUtils-sampleTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D63A76B1B6966EC00D7C297 /* ViewModelSpecs */ = {
+			isa = PBXGroup;
+			children = (
+				2D63A76E1B69672700D7C297 /* UserViewModelSpec.m */,
+				2D63A7701B6973DB00D7C297 /* LoginViewModelSpec.m */,
+				2D63A7721B697C2500D7C297 /* CollectionViewModelSpec.m */,
+				2D63A7741B6A5EA300D7C297 /* ConversationListViewModelSpec.m */,
+				2D63A7761B6A5F6900D7C297 /* PrivateDialogViewModelSpec.m */,
+				2D63A7781B6A642800D7C297 /* MessageViewModelSpec.m */,
+				2D63A77A1B6A702200D7C297 /* TabBarViewModelSpec.m */,
+				2D63A77C1B6A7D7300D7C297 /* UserListViewModelSpec.m */,
+			);
+			name = ViewModelSpecs;
 			sourceTree = "<group>";
 		};
 		2D8C10251B5072C1000DAE2C /* ViewModels */ = {
@@ -228,7 +264,7 @@
 		2DAAC1D61B5036440032584C /* WLXQuickBloxUtils-sampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				2DAAC1D91B5036440032584C /* WLXQuickBloxUtils_sampleTests.m */,
+				2D63A76B1B6966EC00D7C297 /* ViewModelSpecs */,
 				2DAAC1D71B5036440032584C /* Supporting Files */,
 			);
 			path = "WLXQuickBloxUtils-sampleTests";
@@ -238,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				2DAAC1D81B5036440032584C /* Info.plist */,
+				2D63A76A1B69664300D7C297 /* SpecHelper.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -362,6 +399,8 @@
 			children = (
 				67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */,
 				0049314DB306F0B534939661 /* Pods.release.xcconfig */,
+				AFF17BECBDA329AF23848799 /* Pods-WLXQuickBloxUtils-sampleTests.debug.xcconfig */,
+				A2CE63C10FFEF274628FB5F3 /* Pods-WLXQuickBloxUtils-sampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -392,9 +431,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DAAC1E01B5036440032584C /* Build configuration list for PBXNativeTarget "WLXQuickBloxUtils-sampleTests" */;
 			buildPhases = (
+				DE482BDED80408C480DD4A92 /* Check Pods Manifest.lock */,
 				2DAAC1CF1B5036440032584C /* Sources */,
 				2DAAC1D01B5036440032584C /* Frameworks */,
 				2DAAC1D11B5036440032584C /* Resources */,
+				6114FBC8A861388A822DCB6E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -420,6 +461,7 @@
 					};
 					2DAAC1D21B5036440032584C = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 7XS5GQGS29;
 						TestTargetID = 2DAAC1B91B5036440032584C;
 					};
 				};
@@ -497,6 +539,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6114FBC8A861388A822DCB6E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WLXQuickBloxUtils-sampleTests/Pods-WLXQuickBloxUtils-sampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE482BDED80408C480DD4A92 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -535,7 +607,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DAAC1DA1B5036440032584C /* WLXQuickBloxUtils_sampleTests.m in Sources */,
+				2D63A7751B6A5EA300D7C297 /* ConversationListViewModelSpec.m in Sources */,
+				2D63A7771B6A5F6A00D7C297 /* PrivateDialogViewModelSpec.m in Sources */,
+				2D63A7731B697C2500D7C297 /* CollectionViewModelSpec.m in Sources */,
+				2D63A7791B6A642800D7C297 /* MessageViewModelSpec.m in Sources */,
+				2D63A77D1B6A7D7300D7C297 /* UserListViewModelSpec.m in Sources */,
+				2D63A77B1B6A702200D7C297 /* TabBarViewModelSpec.m in Sources */,
+				2D63A7711B6973DB00D7C297 /* LoginViewModelSpec.m in Sources */,
+				2D63A76F1B69672700D7C297 /* UserViewModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +657,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Damian Finkelstein (FYSQS2G8NS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -597,9 +677,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "1dd62ad0-8324-435c-972b-33492d789bc2";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -621,6 +702,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Damian Finkelstein (FYSQS2G8NS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -634,8 +716,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "1dd62ad0-8324-435c-972b-33492d789bc2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -646,6 +729,7 @@
 			baseConfigurationReference = 67470EC5E95331021AE14C20 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Damian Finkelstein (FYSQS2G8NS)";
 				INFOPLIST_FILE = "WLXQuickBloxUtils-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -661,6 +745,7 @@
 			baseConfigurationReference = 0049314DB306F0B534939661 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Damian Finkelstein (FYSQS2G8NS)";
 				INFOPLIST_FILE = "WLXQuickBloxUtils-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -673,11 +758,15 @@
 		};
 		2DAAC1E11B5036440032584C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF17BECBDA329AF23848799 /* Pods-WLXQuickBloxUtils-sampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"${PODS_ROOT}/QuickBlox",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -685,15 +774,20 @@
 				);
 				INFOPLIST_FILE = "WLXQuickBloxUtils-sampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LIBTOOLFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WLXQuickBloxUtils-sample.app/WLXQuickBloxUtils-sample";
 			};
 			name = Debug;
 		};
 		2DAAC1E21B5036440032584C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0049314DB306F0B534939661 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -701,6 +795,7 @@
 				INFOPLIST_FILE = "WLXQuickBloxUtils-sampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WLXQuickBloxUtils-sample.app/WLXQuickBloxUtils-sample";
 			};
 			name = Release;
